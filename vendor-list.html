@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Vendor Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/over-ride.css" rel="stylesheet">
+
+    <!-- Include the plugin's CSS  -->
+    <link href="css/bootstrap-toggle.css" rel="stylesheet">  
+    <link href="css/bootstrap-multiselect.css" rel="stylesheet">
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="row">
+        <div class="col-md-5 col-sm-4">
+          <a href="#menu-toggle" id="menu-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <!--<a href="#" class="logo"><img src="images/logo.jpg"></a>-->
+          <div class="dashboard-titel hidden-xs hidden-sm">Dashboard</div>
+        </div><!-- top right panel -->
+
+        <div class="col-md-7 col-sm-8 margin-top-15">
+          <div class="user-wrap pull-right hidden-xs">
+            <span><img src="images/user.jpg"></span>
+            Brijesh Rajput | <a href="#">logout</a>
+          </div>    
+
+          <div class="dropdown notification-wrap pull-right">
+            <button id="dLabel" type="button" class="sprite" data-toggle="dropdown"></button>
+            <div class="dropdown-menu" aria-labelledby="dLabel">
+              <span class="arrow sprite"></span>
+              <div class="heading-bg">
+                <h2 class="pull-left">Notification</h2>
+                <a href="#" class="pull-right f12">View all</a>
+              <div class="clearfix"></div>  
+              </div>
+              <div class="content_10">
+              <ul class="notification-content">
+                <li>
+                  <p class="padding-bottom-0">Reminder for Delivery</p>
+                  <a href="#" class="f12">View Detail</a>
+                </li>
+
+                <li>
+                  <p class="padding-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <a href="#" class="f12">View Detail</a>
+                </li>
+
+                <li>
+                  <p class="padding-bottom-0">Reminder for Delivery</p>
+                  <a href="#" class="f12">View Detail</a>
+                </li>
+
+                <li>
+                  <p class="padding-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <a href="#" class="f12">View Detail</a>
+                </li>
+
+                <li>
+                  <p class="padding-bottom-0">Reminder for Delivery</p>
+                  <a href="#" class="f12">View Detail</a>
+                </li>
+
+                <li>
+                  <p class="padding-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <a href="#" class="f12">View Detail</a>
+                </li>
+
+
+              </ul>
+              </div>
+            </div>
+          </div><!-- Notification ends here -->
+
+          <div class="input-group search pull-right">
+            <input type="text" class="form-control" placeholder="Enter order ID">
+            <span class="input-group-addon"><span class="search-icon sprite"></span></span>
+          </div><!-- Search widget ends here  -->
+
+        </div><!-- top Left panel -->
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="user-wrap text-center visible-xs">
+                  <span class="block"><img src="images/user.png"></span>
+                  Brijesh Rajput | <a href="#">logout</a>
+                </div><!-- User widgets ends here -->  
+
+                <div class="clearfix"></div>
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order" class="select">
+                     <span class="sprite in-order-icon"></span>In - Orders
+                     <sup class="sprite arrow-icon"></sup>
+                    </a>
+                </div>
+                
+                <div id="in-order" class="panel-collapse collapse in">
+                  <ul>
+                    <li><a href="#">All Orders</a></li>
+                    <li><a href="#" class="select">Unacknowledged <span class="count">32</span></a></li>
+                    <li><a href="#">Acknowledged</a></li>
+                    <li><a href="#">Out for Delivery</a></li>
+                    <li><a href="#">Completed</a></li>
+                    <li><a href="#">Declined</a></li>
+                  </ul>
+                </div>
+              </div><!-- panel Widget Ends here -->
+              
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#out-order">
+                      <span class="sprite in-order-icon"></span>Out - Orders
+                      <sup class="sprite arrow-icon"></sup>
+                    </a>
+                </div>
+                <div id="out-order" class="panel-collapse collapse">
+                  <ul>
+                    <li><a href="#">Create Order</a></li>
+                    <li><a href="#">All Order</a></li>
+                    <li><a href="#">Pending <span class="count">32</span></a></li>
+                    <li><a href="#">Unacknowledged <span class="count">32</span></a></li>
+                    <li><a href="#">Acknowledged</a></li>
+                    <li><a href="#">Out for Delivery</a></li>
+                    <li><a href="#">Completed</a></li>
+                  </ul>
+                </div>
+              </div><!-- panel Widget Ends here -->
+              
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#my-detail">
+                      <span class="sprite my-detail-icon"></span>My Details
+                      <sup class="sprite arrow-icon"></sup>
+                    </a>
+                </div>
+                <div id="my-detail" class="panel-collapse collapse">
+                  <ul>
+                    <li><a href="#">Product Cost</a></li>
+                    <li><a href="#">Supplies</a></li>
+                  </ul>
+                </div>
+              </div><!-- panel Widget Ends here -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing">
+                      <span class="sprite fBilling-icon"></span>FlowerAura Billing
+                      <sup class="sprite arrow-icon"></sup>
+                    </a>
+                </div>
+                <div id="f-billing" class="panel-collapse collapse">
+                  <ul>
+                    <li><a href="#">Billing Summary</a></li>
+                    <li><a href="#">Generate invoice</a></li>
+                  </ul>
+                </div>
+              </div><!-- panel Widget Ends here -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFive">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#m-billing">
+                      <span class="sprite mBilling-icon"></span>Merchant Billing
+                      <sup class="sprite arrow-icon"></sup>
+                    </a>
+                </div>
+                <div id="m-billing" class="panel-collapse collapse">
+                  <ul>
+                    <li><a href="#">Billing Summary</a></li>
+                    <li><a href="#">Generate invoice</a></li>
+                  </ul>
+                </div>
+              </div><!-- panel Widget Ends here -->
+
+
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12"> 
+                      <div class="white-box">
+                        <div class="table-responsive">
+                          <table class="table table-striped"> 
+                            <thead> 
+                              <tr> 
+                                <th>Name</th>
+                                <th>Email ID</th> 
+                                <th>Phone</th>
+                                <th>City</th>
+                                <th>Pincode</th>
+                                <th>Delivery Ch.</th>
+                                <th>Panel usage</th>
+                                <th>Active</th>
+                                <th>View Edit</th>
+                              </tr>
+
+                            </thead> 
+                            <tbody> 
+                              <tr>
+                                <td>Brijesh Rajput</td> 
+                                <td>brijeshranu@gmail.com</td> 
+                                <td>Chanchal FlowerAura</td> 
+                                <td>9871540212</td> 
+                                <td>New Delhi</td> 
+                                <td>110059</td> 
+                                <td class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></td> 
+                                <td align="center">
+                                  <div class="inline-block vender-btn">
+                                    <span class="vender sprite"></span>            
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="rel reply_contact">
+                                    <a href="#" class="btn-sm btn-default" data-toggle="modal" data-target="#view-1">View/Edit</a>    
+                                        <div class="modal fade" id="view-1">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+                                                  <h4 class="modal-title" id="exampleModalLabel">View/Edit<span></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="clearfix"></div>
+                                                  <ul class="flw100 form-list marginTop-20 row">
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" placeholder="Please Enter Name">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Email ID">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Enter Name">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <select>
+                                                        <option selected="" value="Order Status">Slect City</option>
+                                                        <option value="All Orders">Outskirt Delivery Charges</option>
+                                                        <option value="Acknowledged">Additional Product price</option>
+                                                        <option value="Acknowledged">Other</option>
+                                                      </select>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Pincode">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Delivery Charges">
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group margin-top-10">
+                                                    <div class="inline-block margin-right-20">
+                                                      <label>Panel Usage</label>
+                                                      <span class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></span>
+                                                    </div>
+
+                                                    <div class="inline-block vender-btn">
+                                                      <label for="exampleInputEmail1">Active</label>
+                                                      <span class="vender sprite"></span>
+                                                    </div>
+                                                    
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Address"></textarea>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Bank Details"></textarea>
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group">
+                                                    <button class="btn btn-default">Submit</button>
+                                                  </li>
+                                                </ul> <!-- for B widgets -->
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </td> 
+                              </tr><!-- End of TR -->
+
+                              <tr>
+                                <td>Brijesh Rajput</td> 
+                                <td>brijeshranu@gmail.com</td> 
+                                <td>Chanchal FlowerAura</td> 
+                                <td>9871540212</td> 
+                                <td>New Delhi</td> 
+                                <td>110059</td> 
+                                <td class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></td> 
+                                <td align="center">
+                                  <div class="inline-block vender-btn">
+                                    <span class="vender sprite"></span>            
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="rel reply_contact">
+                                    <a href="#" class="btn-sm btn-default" data-toggle="modal" data-target="#view-2">View/Edit</a>    
+                                        <div class="modal fade" id="view-2">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+                                                  <h4 class="modal-title" id="exampleModalLabel">View/Edit<span></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="clearfix"></div>
+                                                  <ul class="flw100 form-list marginTop-20 row">
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" placeholder="Please Enter Name">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Email ID">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Enter Name">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <select>
+                                                        <option selected="" value="Order Status">Slect City</option>
+                                                        <option value="All Orders">Outskirt Delivery Charges</option>
+                                                        <option value="Acknowledged">Additional Product price</option>
+                                                        <option value="Acknowledged">Other</option>
+                                                      </select>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Pincode">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Delivery Charges">
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group margin-top-10">
+                                                    <div class="inline-block margin-right-20">
+                                                      <label>Panel Usage</label>
+                                                      <span class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></span> 
+                                                    </div>
+
+                                                    <div class="inline-block vender-btn">
+                                                      <label for="exampleInputEmail1">Active</label>
+                                                      <span class="vender sprite"></span>
+                                                    </div>
+                                                    
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Address"></textarea>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Bank Details"></textarea>
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group">
+                                                    <button class="btn btn-default">Submit</button>
+                                                  </li>
+                                                </ul> <!-- for B widgets -->
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </td> 
+                              </tr><!-- End of TR -->
+
+                              <tr>
+                                <td>Brijesh Rajput</td> 
+                                <td>brijeshranu@gmail.com</td> 
+                                <td>Chanchal FlowerAura</td> 
+                                <td>9871540212</td> 
+                                <td>New Delhi</td> 
+                                <td>110059</td> 
+                                <td class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></td>  
+                                <td align="center">
+                                  <div class="inline-block vender-btn">
+                                    <span class="vender sprite"></span>            
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="rel reply_contact">
+                                    <a href="#" class="btn-sm btn-default" data-toggle="modal" data-target="#view-3">View/Edit</a>    
+                                        <div class="modal fade" id="view-3">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+                                                  <h4 class="modal-title" id="exampleModalLabel">View/Edit<span></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="clearfix"></div>
+                                                  <ul class="flw100 form-list marginTop-20 row">
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" placeholder="Please Enter Name">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Email ID">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Enter Name">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <select>
+                                                        <option selected="" value="Order Status">Slect City</option>
+                                                        <option value="All Orders">Outskirt Delivery Charges</option>
+                                                        <option value="Acknowledged">Additional Product price</option>
+                                                        <option value="Acknowledged">Other</option>
+                                                      </select>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Pincode">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Delivery Charges">
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group margin-top-10">
+                                                    <div class="inline-block margin-right-20">
+                                                      <label>Panel Usage</label>
+                                                      <span class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></span> 
+                                                    </div>
+
+                                                    <div class="inline-block vender-btn">
+                                                      <label for="exampleInputEmail1">Active</label>
+                                                      <span class="vender sprite"></span>
+                                                    </div>
+                                                    
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Address"></textarea>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Bank Details"></textarea>
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group">
+                                                    <button class="btn btn-default">Submit</button>
+                                                  </li>
+                                                </ul> <!-- for B widgets -->
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </td> 
+                              </tr><!-- End of TR -->
+
+                              <tr>
+                                <td>Brijesh Rajput</td> 
+                                <td>brijeshranu@gmail.com</td> 
+                                <td>Chanchal FlowerAura</td> 
+                                <td>9871540212</td> 
+                                <td>New Delhi</td> 
+                                <td>110059</td> 
+                                <td class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></td> 
+                                <td align="center">
+                                  <div class="inline-block vender-btn">
+                                    <span class="vender sprite"></span>            
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="rel reply_contact">
+                                    <a href="#" class="btn-sm btn-default" data-toggle="modal" data-target="#view-4">View/Edit</a>    
+                                        <div class="modal fade" id="view-4">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+                                                  <h4 class="modal-title" id="exampleModalLabel">View/Edit<span></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="clearfix"></div>
+                                                  <ul class="flw100 form-list marginTop-20 row">
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" placeholder="Please Enter Name">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Email ID">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Enter Name">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <select>
+                                                        <option selected="" value="Order Status">Slect City</option>
+                                                        <option value="All Orders">Outskirt Delivery Charges</option>
+                                                        <option value="Acknowledged">Additional Product price</option>
+                                                        <option value="Acknowledged">Other</option>
+                                                      </select>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Pincode">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Delivery Charges">
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group margin-top-10">
+                                                    <div class="inline-block margin-right-20">
+                                                      <label>Panel Usage</label>
+                                                      <span class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></span> 
+                                                    </div>
+
+                                                    <div class="inline-block vender-btn">
+                                                      <label for="exampleInputEmail1">Active</label>
+                                                      <span class="vender sprite"></span>
+                                                    </div>
+                                                    
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Address"></textarea>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Bank Details"></textarea>
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group">
+                                                    <button class="btn btn-default">Submit</button>
+                                                  </li>
+                                                </ul> <!-- for B widgets -->
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </td> 
+                              </tr><!-- End of TR -->
+
+                              <tr>
+                                <td>Brijesh Rajput</td> 
+                                <td>brijeshranu@gmail.com</td> 
+                                <td>Chanchal FlowerAura</td> 
+                                <td>9871540212</td> 
+                                <td>New Delhi</td> 
+                                <td>110059</td> 
+                                <td class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></td> 
+                                <td align="center">
+                                  <div class="inline-block vender-btn">
+                                    <span class="vender sprite"></span>            
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="rel reply_contact">
+                                    <a href="#" class="btn-sm btn-default" data-toggle="modal" data-target="#view-5">View/Edit</a>    
+                                        <div class="modal fade" id="view-5">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+                                                  <h4 class="modal-title" id="exampleModalLabel">View/Edit<span></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="clearfix"></div>
+                                                  <ul class="flw100 form-list marginTop-20 row">
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" placeholder="Please Enter Name">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Email ID">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Enter Name">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <select>
+                                                        <option selected="" value="Order Status">Slect City</option>
+                                                        <option value="All Orders">Outskirt Delivery Charges</option>
+                                                        <option value="Acknowledged">Additional Product price</option>
+                                                        <option value="Acknowledged">Other</option>
+                                                      </select>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Pincode">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Delivery Charges">
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group margin-top-10">
+                                                    <div class="inline-block margin-right-20">
+                                                      <label>Panel Usage</label>
+                                                      <span class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></span> 
+                                                    </div>
+
+                                                    <div class="inline-block vender-btn">
+                                                      <label for="exampleInputEmail1">Active</label>
+                                                      <span class="vender sprite"></span>
+                                                    </div>
+                                                    
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Address"></textarea>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Bank Details"></textarea>
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group">
+                                                    <button class="btn btn-default">Submit</button>
+                                                  </li>
+                                                </ul> <!-- for B widgets -->
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </td> 
+                              </tr><!-- End of TR -->
+
+                              <tr>
+                                <td>Brijesh Rajput</td> 
+                                <td>brijeshranu@gmail.com</td> 
+                                <td>Chanchal FlowerAura</td> 
+                                <td>9871540212</td> 
+                                <td>New Delhi</td> 
+                                <td>110059</td> 
+                                <td class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></td> 
+                                <td align="center">
+                                  <div class="inline-block vender-btn">
+                                    <span class="vender sprite"></span>            
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="rel reply_contact">
+                                    <a href="#" class="btn-sm btn-default" data-toggle="modal" data-target="#view-6">View/Edit</a>    
+                                        <div class="modal fade" id="view-6">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+                                                  <h4 class="modal-title" id="exampleModalLabel">View/Edit<span></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="clearfix"></div>
+                                                  <ul class="flw100 form-list marginTop-20 row">
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" placeholder="Please Enter Name">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Email ID">
+                                                  </li>
+                                                  
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Enter Name">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                      <select>
+                                                        <option selected="" value="Order Status">Slect City</option>
+                                                        <option value="All Orders">Outskirt Delivery Charges</option>
+                                                        <option value="Acknowledged">Additional Product price</option>
+                                                        <option value="Acknowledged">Other</option>
+                                                      </select>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Pincode">
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Please Delivery Charges">
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group margin-top-10">
+                                                    <div class="inline-block margin-right-20">
+                                                      <label>Panel Usage</label>
+                                                      <span class="toggle-wrap"><input type="checkbox" checked data-toggle="toggle"></span> 
+                                                    </div>
+
+                                                    <div class="inline-block vender-btn">
+                                                      <label for="exampleInputEmail1">Active</label>
+                                                      <span class="vender sprite"></span>
+                                                    </div>
+                                                    
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Address"></textarea>
+                                                  </li>
+
+                                                  <li class="col-sm-6 col-xs-12 form-group">
+                                                    <textarea class="form-control" rows="2" placeholder="Bank Details"></textarea>
+                                                  </li>
+
+                                                  <li class="col-xs-12 form-group">
+                                                    <button class="btn btn-default">Submit</button>
+                                                  </li>
+                                                </ul> <!-- for B widgets -->
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </td> 
+                              </tr><!-- End of TR -->
+
+                            </tbody><!-- End of table body --> 
+                          </table><!-- End of table -->
+                      </div><!-- Responsive Div ends here -->
+                      </div><!-- white box ends here -->
+                    </div><!-- Col div ends here -->
+                </div><!-- ends of ROW here -->
+            </div><!-- ends of container-fluid here -->
+        </div><!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <div class="custom-350">
+    <div class="modal fade" id="offline-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
+
+            <h4 class="modal-title" id="exampleModalLabel">Raise Ticket<span></span></h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group marginTop-15">
+                  <select class="selectboxdiv">
+                  <option selected="" value="Order Status">Choose Ticket Type</option>
+                  <option value="All Orders">Price Request</option>
+                  <option value="Acknowledged">Product Not Available</option>
+                  <option value="Acknowledged">Other</option>
+                  </select>
+              </div>
+            
+            <ul class="flw100 form-list marginTop-20">
+            <li>
+              <div class="form-group">
+                <select class="selectboxdiv">
+                  <option selected="" value="Order Status">Reason</option>
+                  <option value="All Orders">Outskirt Delivery Charges</option>
+                  <option value="Acknowledged">Additional Product price</option>
+                  <option value="Acknowledged">Other</option>
+                </select>
+                </div>
+            </li>
+            
+            <li>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Price">
+                </div>
+            </li>
+            
+            <li>
+                <div class="form-group">
+                    <textarea class="form-control" rows="2"></textarea>
+                </div>
+            </li>
+            <div class="clearfix"></div>
+            <li>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </li>
+            
+            </ul> <!-- for A widgets -->
+
+            
+          <div class="clearfix"></div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Include the plugin's JS: -->
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script src="https://use.typekit.net/rou6gqr.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-toggle.min.js"></script>
+
+  </body>
+</html>
