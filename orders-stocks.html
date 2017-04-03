@@ -16,7 +16,6 @@
     <link href="css/over-ride.css" rel="stylesheet">
 
     <!-- Include the plugin's CSS  -->
-    <link href="css/jquery.onoff.css" rel="stylesheet">
     <link href="css/bootstrap-multiselect.css" rel="stylesheet">
     <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
@@ -30,6 +29,7 @@
     <![endif]-->
   </head>
   <body>
+
 
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -129,7 +129,7 @@
                 
                 <div id="in-order" class="panel-collapse collapse">
                   <ul>
-                    <li><a href="all-orders.html" class="select">All Orders</a></li>
+                    <li><a href="all-orders.html">All Orders</a></li>
                     <li><a href="#">Unacknowledged <span class="count">32</span></a></li>
                     <li><a href="#">Acknowledged</a></li>
                     <li><a href="#">Out for Delivery</a></li>
@@ -156,8 +156,8 @@
               </div><!-- panel Widget Ends here -->
 
               <div class="panel panel-default">
-                <div class="panel-heading">
-                    <a class="collapsed" href="orders-stocks.html">
+                <div class="panel-heading" class="select">
+                    <a class="collapsed select" href="orders-stocks.html">
                       <span class="sprite stock-icon"></span>Stock Management
                     </a>
                 </div>
@@ -180,14 +180,14 @@
 
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingFour">
-                    <a class="collapsed select" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing" class="select">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing">
                       <span class="sprite fBilling-icon"></span>FlowerAura Billing
                       <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
-                <div id="f-billing" class="panel-collapse collapse in">
+                <div id="f-billing" class="panel-collapse collapse">
                   <ul>
-                    <li><a href="billing-summary.html" class="select">Billing Summary</a></li>
+                    <li><a href="billing-summary.html">Billing Summary</a></li>
                     <li><a href="generate-invoice.html">Generate invoice</a></li>
                   </ul>
                 </div>
@@ -215,202 +215,205 @@
                     </a>
                 </div>
               </div><!-- panel Widget Ends here -->
+
+
+
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-12"> 
-                <div class="white-box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                      <ul class="filter-wrap">
+                        <li class="form-group">
+                          <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                              <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
+                              <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
+                          </div>
+                          <input type="hidden" id="dtp_input2" value="" />
+                        </li>
+                        <li>
+                          <a href="#" class="btn btn-default margin-right-8"><span class="sprite apply-icon hidden-xs"></span>Apply</a>
+                        </li>
+                      </ul>                                           
+                    </div><!-- Filter Row ends here -->
+                </div><!-- Filter Row ends here -->
 
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <h2 class="heading">Billing Summary</h2>
-                    </div>
+                <div class="row">
+                  <div class="col-sm-12"> 
+                      <div class="white-box margin-top-20">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <h2 class="heading">Order Stock</h2>
+                          </div>
 
-                    <div class="col-sm-8">
-                      <ol class="breadcrumb pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li>Billing Summary</li>
-                      </ol>
-                    </div>
-                  </div>
+                          <div class="col-sm-8">
+                            <ol class="breadcrumb pull-right">
+                              <li><a href="#">Home</a></li>
+                              <li>Order Stock</li>
+                            </ol>
+                          </div>
+                        </div><!-- row ends here -->
+
+                        <div class="clearfix"></div><!-- clearfix heading -->
 
 
-                  <div class="table-responsive margin-top-20">
-                    <table class="table table-bordered"> 
-                      <thead> 
-                        <tr class="active"> 
-                          <th>S.No.</th>
-                          <th>Month/Year</th>
-                          <th>Vendor Name</th>
-                          <th>Order Out</th>
-                          <th>Order In</th>
-                          <th>Supplies</th>
-                          <th>Net Amount</th>
-                          <th>Outstanding Balance</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead> 
-                        <tr>
-                          <td>1.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                        <!-- flower widgets Satrts here -->
+                        <div class="table-box margin-top-20">
+                          <div class="row">
+                            <div class="col-sm-4 col-xs-12 hidden-xs">
+                              <div class="text-center margin-top-30">
+                                <img src="images/flowers.jpg">
+                              </div>
+                            </div>
 
-                        <tr>
-                          <td>2.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                            <div class="col-sm-8 col-xs-12">
+                              <div class="table-responsive margin-top-20">
+                              <table class="table table-bordered"> 
+                                <thead> 
+                                  <tr class="active"> 
+                                    <th width="1%">S.No.</th> 
+                                    <th width="10%">Product Name</th>
+                                    <th width="8%">Total</th>
+                                  </tr>
 
-                        <tr>
-                          <td>3.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                                </thead> 
+                                <tbody> 
+                                  <tr> 
+                                    <td scope="row">1</td> 
+                                    <td>Himanshu</td>
+                                    <td>hi.chawla@gmail.com</td>
+                                  </tr> 
 
-                        <tr>
-                          <td>4.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                                  <tr> 
+                                    <td scope="row">2</td> 
+                                    <td>Brijesh rajput</td>
+                                    <td>brijeshranu@gmail.com</td>
+                                  </tr>
 
-                        <tr>
-                          <td>5.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                                  <tr> 
+                                    <td scope="row">3</td> 
+                                    <td>Harish</td>
+                                    <td>harish.kumara@gmail.com</td>
+                                  </tr> 
 
-                        <tr>
-                          <td>6.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                                </tbody> 
+                              </table>
+                            </div><!-- Responsive Div ends here -->
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div><!-- flower widgets Ends here -->
 
-                        <tr>
-                          <td>7.</td>
-                          <td>Dec-2016</td>
-                          <td>Gurgaon_contactus</td>
-                          <td>2290.00</td>
-                          <td>47758.00</td>
-                          <td>0.00</td>
-                          <td>-45468.00</td>
-                          <td>-76379.00</td>
-                          <td><a href="billing-deatils.html" class="btn-sm btn-default">View</a></td>
-                        </tr>
+                        <!-- flower widgets Satrts here -->
+                        <div class="table-box margin-top-20">
+                          <div class="row">
+                            <div class="col-sm-4 col-xs-12 hidden-xs">
+                              <div class="text-center margin-top-30">
+                                <img src="images/cake.jpg">
+                              </div>
+                            </div>
 
-                      <tbody> 
+                            <div class="col-sm-8 col-xs-12">
+                              <div class="table-responsive margin-top-20">
+                              <table class="table table-bordered"> 
+                                <thead> 
+                                  <tr class="active"> 
+                                    <th width="1%">S.No.</th> 
+                                    <th width="10%">Product Name</th>
+                                    <th width="8%">Total</th>
+                                  </tr>
 
-                      </tbody><!-- End of table body --> 
-                    </table><!-- End of table -->
-                  </div><!-- Responsive Div ends here -->
-                </div><!-- white box ends here -->
-              </div><!-- Col div ends here -->
-            </div><!-- ends of ROW here -->
-          </div><!-- ends of container-fluid here -->
-        </div><!-- /#page-content-wrapper -->
+                                </thead> 
+                                <tbody> 
+                                  <tr> 
+                                    <td scope="row">1</td> 
+                                    <td>Himanshu</td>
+                                    <td>hi.chawla@gmail.com</td>
+                                  </tr> 
+
+                                  <tr> 
+                                    <td scope="row">2</td> 
+                                    <td>Brijesh rajput</td>
+                                    <td>brijeshranu@gmail.com</td>
+                                  </tr>
+
+                                  <tr> 
+                                    <td scope="row">3</td> 
+                                    <td>Harish</td>
+                                    <td>harish.kumara@gmail.com</td>
+                                  </tr> 
+
+                                </tbody> 
+                              </table>
+                            </div><!-- Responsive Div ends here -->
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div><!-- flower widgets Ends here -->
+
+                        <!-- flower widgets Satrts here -->
+                        <div class="table-box margin-top-20">
+                          <div class="row">
+                            <div class="col-sm-4 col-xs-12 hidden-xs">
+                              <div class="text-center margin-top-30">
+                                <img src="images/miscellaneous.jpg">
+                              </div>
+                            </div>
+
+                            <div class="col-sm-8 col-xs-12">
+                              <div class="table-responsive margin-top-20">
+                              <table class="table table-bordered"> 
+                                <thead> 
+                                  <tr class="active"> 
+                                    <th width="1%">S.No.</th> 
+                                    <th width="10%">Product Name</th>
+                                    <th width="8%">Total</th>
+                                  </tr>
+
+                                </thead> 
+                                <tbody> 
+                                  <tr> 
+                                    <td scope="row">1</td> 
+                                    <td>Himanshu</td>
+                                    <td>hi.chawla@gmail.com</td>
+                                  </tr> 
+
+                                  <tr> 
+                                    <td scope="row">2</td> 
+                                    <td>Brijesh rajput</td>
+                                    <td>brijeshranu@gmail.com</td>
+                                  </tr>
+
+                                  <tr> 
+                                    <td scope="row">3</td> 
+                                    <td>Harish</td>
+                                    <td>harish.kumara@gmail.com</td>
+                                  </tr> 
+
+                                </tbody> 
+                              </table>
+                            </div><!-- Responsive Div ends here -->
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div><!-- flower widgets Ends here -->
+
+                        
+                      </div><!-- white box ends here -->
+                    </div><!-- Col div ends here -->
+                </div>
+
+                
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
-    <div class="custom-350">
-    <div class="modal fade" id="offline-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <a href="#" class="btn-close sprite" data-dismiss="modal"></a>
-
-            <h4 class="modal-title" id="exampleModalLabel">Raise Ticket<span></span></h4>
-          </div>
-          <div class="modal-body">
-            <div class="form-group marginTop-15">
-                  <select class="selectboxdiv">
-                  <option selected="" value="Order Status">Choose Ticket Type</option>
-                  <option value="All Orders">Price Request</option>
-                  <option value="Acknowledged">Product Not Available</option>
-                  <option value="Acknowledged">Other</option>
-                  </select>
-              </div>
-            
-            <ul class="flw100 form-list marginTop-20">
-            <li>
-              <div class="form-group">
-                <select class="selectboxdiv">
-                  <option selected="" value="Order Status">Reason</option>
-                  <option value="All Orders">Outskirt Delivery Charges</option>
-                  <option value="Acknowledged">Additional Product price</option>
-                  <option value="Acknowledged">Other</option>
-                </select>
-                </div>
-            </li>
-            
-            <li>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Price">
-                </div>
-            </li>
-            
-            <li>
-                <div class="form-group">
-                    <textarea class="form-control" rows="2"></textarea>
-                </div>
-            </li>
-            <div class="clearfix"></div>
-            <li>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-            </li>
-            
-            </ul> <!-- for A widgets -->
-
-            
-          <div class="clearfix"></div>  
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -423,14 +426,6 @@
     <script src="https://use.typekit.net/rou6gqr.js"></script>
     <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
-    <script src="js/require.js"></script>
-    <script>
-      require({
-        paths: { jquery: 'js/jquery' }
-      }, [ 'jquery', 'js/jquery.onoff' ], function( $ ) {
-        $('input[type=checkbox]').onoff();
-      });
-    </script>
 
   </body>
 </html>

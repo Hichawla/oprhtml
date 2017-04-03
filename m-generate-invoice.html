@@ -225,24 +225,44 @@
         <div id="page-content-wrapper">
           <div class="container-fluid">
             <div class="row">
+                <div class="col-sm-12">
+                  <ul class="filter-wrap">
+                    <li class="form-group">
+                      <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                          <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
+                          <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
+                      </div>
+                      <input type="hidden" id="dtp_input2" value="" />
+                    </li>
+                    <li><input class="form-control" placeholder="Merchant Name" type="text"></li>
+                    <li>
+                      <a href="#" class="btn btn-default margin-right-8"><span class="sprite apply-icon hidden-xs"></span>Apply</a>
+                    </li>
+                  </ul>                                           
+                </div><!-- Filter Row ends here -->
+            </div><!-- Filter Row ends here -->
+
+            <div class="row">
               <div class="col-sm-12"> 
                 <div class="white-box">
                     <div class="row">
                       <div class="col-sm-6 col-xs-12">
-                        <h2 class="heading margin-bottom-10 margin-top-0">Create Orders</h2>
+                        <h2 class="heading margin-bottom-10 margin-top-0">Generate Merchant Invoice</h2>
                       </div><!-- end of heading -->
 
                       <div class="col-sm-6 hidden-xs">
                         <div class="row">
                           <ol class="breadcrumb pull-right">
                               <li><a href="#">Home</a></li>
-                              <li>Create Orders</li>
+                              <li>Generate Merchant Invoice</li>
                           </ol>
                         </div>
                       </div>
                       </div><!-- end of ROW -->
 
-                      <div class="row">
+                      <div class="alert alert-danger">Please Select Merchant</div>
+
+                      <div class="row margin-top-20">
                       <div class="col-sm-6">
                         <ul>
                           
@@ -651,6 +671,8 @@
       </div>
     </div>
     </div>
+
+    <a href="#" class="genrate-invoice img-circle" data-toggle="tooltip" data-placement="top" title="Generate Invoice"><sup class="sprite"></sup></a>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

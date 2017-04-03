@@ -16,11 +16,10 @@
     <link href="css/over-ride.css" rel="stylesheet">
 
     <!-- Include the plugin's CSS  -->
+    <link href="css/jquery.onoff.css" rel="stylesheet">
     <link href="css/bootstrap-multiselect.css" rel="stylesheet">
     <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
-    <link href="css/chat-box.css" rel="stylesheet">
-
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -121,15 +120,15 @@
 
                 <div class="clearfix"></div>
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order" class="select">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order">
                      <span class="sprite in-order-icon"></span>In - Orders
                      <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
                 
-                <div id="in-order" class="panel-collapse collapse in">
+                <div id="in-order" class="panel-collapse collapse">
                   <ul>
-                    <li><a href="all-orders.html" class="select">All Orders</a></li>
+                    <li><a href="all-orders.html">All Orders</a></li>
                     <li><a href="#">Unacknowledged <span class="count">32</span></a></li>
                     <li><a href="#">Acknowledged</a></li>
                     <li><a href="#">Out for Delivery</a></li>
@@ -141,15 +140,15 @@
               
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingTwo">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#out-order">
+                    <a class="collapsed select" role="button" data-toggle="collapse" data-parent="#accordion" href="#out-order">
                       <span class="sprite in-order-icon"></span>Out - Orders
                       <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
-                <div id="out-order" class="panel-collapse collapse">
+                <div id="out-order" class="panel-collapse collapse in">
                   <ul>
                     <li><a href="out-all-orders.html">All Order</a></li>
-                    <li><a href="create-order.html">Create Order</a></li>
+                    <li><a href="create-order.html" class="select">Create Order</a></li>
                     <li><a href="merchant-list.html">Merchants</a></li>
                   </ul>
                 </div>
@@ -221,185 +220,114 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                  <div class="col-sm-12"> 
-                      <div class="white-box margin-top-20">
-                        <div class="row margin-bottom-10">
-                          <div class="col-sm-12 col-xs-12">
-                            <div class="row">
-                              <ol class="breadcrumb">
-                                  <li><a href="#">Home</a></li>
-                                  <li><a href="#">Complaint Listing</a></li>
-                                  <li>Complaint View</li>
-                              </ol>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12"> 
+                <div class="white-box">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <h2 class="heading margin-bottom-10 margin-top-0">Product Information</h2>
+                      </div><!-- end of heading -->
+
+                      <div class="col-sm-6">
+                        <ul>
+                          <li class="form-group">
+                            <label class="control-label">Date</label>
+                            <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
+                                <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
                             </div>
-                          </div><!-- end of col -->
-                        </div><!-- end og breadcrumb here -->
+                            <input type="hidden" id="dtp_input2" value="" />
+                          </li>
 
-                        <div class="box-flex row margin-top-20">
-                          <div class="col-md-4 col-xs-12">
-                              <div class="table-box">
-                                <h2 class="pull-left">Complaint Info</h2>
-                                <p class="pull-right complaint-status">Status <span class="label label-success">Closed</span></p>
-                                    <table class="table table-condensed">
-                                      <tbody>
-                                          <tr>
-                                            <td width="40%">Complaint No.</td>
-                                            <td width="60%"><strong>#65262</strong></td>
-                                          </tr>
+                          <li class="form-group">
+                            <label class="control-label">Delivery Type</label>
+                              <select>
+                                <option value="-- Choose --" selected="">Choose Delivery Type</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Midnight">Midnight</option>
+                              </select>
+                          </li>
 
-                                          <tr>
-                                            <td>Complaint Type</td>
-                                            <td><strong>Cake Message</strong></td>
-                                          </tr>
-
-                                          <tr>
-                                            <td>Created By</td>
-                                            <td><strong>Mahima Julka</strong></td>
-                                          </tr>
-
-                                          <tr>
-                                            <td>Resolution Date</td>
-                                            <td><strong>28 Sep 2016</strong></td>
-                                          </tr>
-
-                                          <tr>
-                                            <td>Created On</td>
-                                            <td><strong>2016-09-12 12:40:03</strong></td>
-                                          </tr>
-                                      
-                                    </tbody>
-                                  </table>
-                              </div><!-- end of table-box here -->
-                          </div><!-- end of COL here -->
+                          <li class="form-group">
+                            <label class="control-label">Vendor Reference No.</label>
+                            <input type="text" placeholder="Vendor Reference No." class="form-control">
+                          </li>
+                        </ul>
+                      </div><!-- end of Col 6 -->
 
 
-                          <div class="col-md-4 col-xs-12">
-                              <div class="table-box">
-                                <h2>Order Info</h2>
-                                    <table class="table table-condensed">
-                                      <tbody>
-                                          <tr>
-                                            <td width="40%">Order Id</td>
-                                            <td width="60%"><strong><a href="#">644504</a></strong></td>
-                                          </tr>
+                      <div class="col-sm-6">
+                        <ul>
+                          <li class="form-group">
+                            <label class="control-label">Price</label>
+                            <input type="text" placeholder="Price" class="form-control">
+                          </li>
 
-                                          <tr>
-                                            <td>Vendor Name</td>
-                                            <td><strong>harish</strong></td>
-                                          </tr>
+                          <li class="form-group">
+                            <label class="control-label">Product Description</label>
+                            <textarea rows="4" class="form-control" placeholder="Product Description"></textarea>
+                          </li>
 
-                                          <tr>
-                                            <td>Delivery Date</td>
-                                            <td><strong>08 Aug 2016</strong></td>
-                                          </tr>
-                                      
-                                    </tbody>
-                                  </table>
-                              </div><!-- end of table-box here -->
-                          </div><!-- end of COL here -->
+                        </ul>
+                      </div><!-- end of Col 6 -->
+                    </div><!-- end of ROW -->
 
-                          <div class="col-md-4 col-xs-12">
-                              <div class="table-box">
-                                <h2>Attachment Info</h2>
-                                    <table class="table table-condensed pics margin-bottom-0">
-                                      <tbody>
-                                          <tr>
-                                            <td width="50%"><img src="images/u134.png" class="img-responsive"></td>
-                                            <td width="50%"><img src="images/u134.png" class="img-responsive"></td>
-                                          </tr>
-                                      
-                                    </tbody>
-                                  </table>
-                              </div><!-- end of table-box here -->
-                          </div><!-- end of COL here -->
-                      </div><!-- end of box-flex here -->
+                    <div class="row margin-top-20">
+                      <div class="col-xs-12">
+                        <h2 class="heading margin-bottom-10 margin-top-0">Address Information</h2>
+                      </div><!-- end of heading -->
 
-                      <div class="table-box" style="height:auto;">
-                        <h2 class="margin-bottom-0">Complaints Comments</h2>
-                        <hr class="margin-top-0">
+                      <div class="col-sm-6">
+                        <ul>
+                          <li class="form-group">
+                            <label class="control-label">Address</label>
+                            <textarea rows="4" class="form-control" placeholder="Product Description"></textarea>
+                          </li>
 
-                        <div class="message_detail">
-                            <div class="content padding-bottom-0">
-                                <ul class="chat_items">
-                                    <li class="user_1">
-                                        <div class="user-info">
-                                            <span></span>
-                                            <strong class="name">Mahima Julka</strong>
-                                            12 Sep 2016 12:40 PM
-                                        </div>
+                          <li class="form-group">
+                            <label class="control-label">Pincode</label>
+                            <input type="text" placeholder="Pincode" class="form-control">
+                          </li>
+                          <li class="form-group">
+                            <label class="control-label">Message</label>
+                            <textarea rows="3" class="form-control" placeholder="Product Description"></textarea>
+                          </li>
+                        </ul>
+                      </div><!-- end of Col 6 -->
 
-                                        <div class="chat">
-                                            <sup></sup>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </div>     
-                                    </li><!-- end of LI here -->
+                      <div class="col-sm-6">
+                        <ul>
+                          <li class="form-group">
+                            <label class="control-label">City</label>
+                            <input type="text" placeholder="Pincode" class="form-control">
+                          </li>
 
-                                    <li class="user_2">
-                                        <div class="user-info">
-                                            12 Sep 2016 12:43 PM
-                                            <strong class="name">harish</strong>
-                                            <span></span>
-                                        </div>                   
-                                        
-                                        <div class="chat">
-                                            <sup></sup>
-                                            This is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .
-                                        </div>
-                                    </li><!-- end of LI here -->
+                          <li class="form-group">
+                            <label class="control-label">State</label>
+                            <input type="text" placeholder="Pincode" class="form-control">
+                          </li>
 
-                                     <li class="user_1">
-                                        <div class="user-info">
-                                            <span></span>
-                                            <strong class="name">Flower Aura</strong>
-                                            04 Sep 2014 1:01
-                                        </div>
-
-                                        <div class="chat">
-                                            <sup></sup>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                                        </div>     
-                                    </li><!-- end of LI here -->
-
-                                    <li class="user_2">
-                                        <div class="user-info">
-                                            04 Sep 2014 1:01
-                                            <strong class="name">Harish</strong>
-                                            <span></span>
-                                        </div>                   
-                                        
-                                        <div class="chat">
-                                            <sup></sup>
-                                            This is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .
-                                        </div>
-                                    </li><!-- end of LI here -->
-
-                                    <li class="user_1">
-                                        <div class="user-info">
-                                            <span></span>
-                                            <strong class="name">Flower Aura</strong>
-                                            04 Sep 2014 1:01
-                                        </div>
-
-                                        <div class="chat">
-                                            <sup></sup>
-                                            Sed aliquet mauris consectetur tortor cursus, id cursus ipsum efficitur
-                                        </div>     
-                                    </li><!-- end of LI here -->
-                                </ul><!-- end of UL here -->
-                                <div class="clearfix"></div>
-                                <div class="alert alert-danger margin-top-20">Complaint is Closed. You can't add more Comment!</div>
-                            </div><!-- On going chat ends here -->
-                        </div><!-- end of message_detail DIV here -->
-
-                    <div class="clearfix"></div>
-                    </div>
-
-                      </div><!-- white box ends here -->
-                    </div><!-- Col div ends here -->
-                </div><!-- ends of ROW here -->
-            </div><!-- ends of container-fluid here -->
+                          <li class="form-group">
+                            <label class="control-label">Phone</label>
+                            <input type="text" placeholder="Pincode" class="form-control">
+                          </li>
+                          <li class="form-group">
+                            <label class="control-label">Special Instruction</label>
+                            <textarea rows="3" class="form-control" placeholder="Product Description"></textarea>
+                          </li>
+                        </ul>
+                      </div><!-- end of Col 6 -->
+                      <div class="col-xs-12">
+                        <li class="form-group">
+                          <button class="btn btn-default w110" type="submit">Submit</button>
+                        </li>
+                      </div><!-- end of Col 12 -->
+                    </div><!-- end of ROW -->
+                </div><!-- white box ends here -->
+              </div><!-- Col div ends here -->
+            </div><!-- ends of ROW here -->
+          </div><!-- ends of container-fluid here -->
         </div><!-- /#page-content-wrapper -->
 
     </div>
@@ -454,8 +382,6 @@
             </li>
             
             </ul> <!-- for A widgets -->
-
-            
           <div class="clearfix"></div>  
           </div>
         </div>
@@ -474,6 +400,14 @@
     <script src="https://use.typekit.net/rou6gqr.js"></script>
     <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/require.js"></script>
+    <script>
+      require({
+        paths: { jquery: 'js/jquery' }
+      }, [ 'jquery', 'js/jquery.onoff' ], function( $ ) {
+        $('input[type=checkbox]').onoff();
+      });
+    </script>
 
   </body>
 </html>

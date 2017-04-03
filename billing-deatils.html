@@ -16,10 +16,10 @@
     <link href="css/over-ride.css" rel="stylesheet">
 
     <!-- Include the plugin's CSS  -->
+    <link href="css/jquery.onoff.css" rel="stylesheet">
     <link href="css/bootstrap-multiselect.css" rel="stylesheet">
     <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
-    <link href="css/chat-box.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -121,13 +121,13 @@
 
                 <div class="clearfix"></div>
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order" class="select">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order">
                      <span class="sprite in-order-icon"></span>In - Orders
                      <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
                 
-                <div id="in-order" class="panel-collapse collapse in">
+                <div id="in-order" class="panel-collapse collapse">
                   <ul>
                     <li><a href="all-orders.html" class="select">All Orders</a></li>
                     <li><a href="#">Unacknowledged <span class="count">32</span></a></li>
@@ -180,15 +180,15 @@
 
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingFour">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing" class="select">
                       <span class="sprite fBilling-icon"></span>FlowerAura Billing
                       <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
-                <div id="f-billing" class="panel-collapse collapse">
+                <div id="f-billing" class="panel-collapse collapse in">
                   <ul>
                     <li><a href="billing-summary.html">Billing Summary</a></li>
-                    <li><a href="generate-invoice.html">Generate invoice</a></li>
+                    <li><a href="generate-invoice.html" class="select">Generate invoice</a></li>
                   </ul>
                 </div>
               </div><!-- panel Widget Ends here -->
@@ -224,178 +224,227 @@
             <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-12"> 
-                      <div class="white-box margin-top-20">
-                        <div class="row margin-bottom-10">
-                          <div class="col-sm-12 col-xs-12">
-                            <div class="row">
-                              <ol class="breadcrumb">
-                                  <li><a href="#">Home</a></li>
-                                  <li><a href="#">Complaint Listing</a></li>
-                                  <li>Complaint View</li>
-                              </ol>
-                            </div>
-                          </div><!-- end of col -->
-                        </div><!-- end og breadcrumb here -->
+                      <div class="white-box">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <h2 class="heading">Billing Deatils</h2>
+                          </div>
 
-                        <div class="box-flex row margin-top-20">
-                          <div class="col-md-4 col-xs-12">
-                              <div class="table-box">
-                                <h2 class="pull-left">Complaint Info</h2>
-                                <p class="pull-right complaint-status">Status <span class="label label-success">Closed</span></p>
-                                    <table class="table table-condensed">
-                                      <tbody>
-                                          <tr>
-                                            <td width="40%">Complaint No.</td>
-                                            <td width="60%"><strong>#65262</strong></td>
-                                          </tr>
+                          <div class="col-sm-8">
+                            <ol class="breadcrumb pull-right">
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Billing Summary</a></li>
+                              <li>Billing Deatils <strong>[ Dec-2016 , Gurgaon_contactus ]</strong></li>
+                            </ol>
+                          </div>
+                        </div>
 
-                                          <tr>
-                                            <td>Complaint Type</td>
-                                            <td><strong>Cake Message</strong></td>
-                                          </tr>
+                        <!-- Tabbing widgets starts here -->
+                        <div class="margin-top-30">
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#order-out" data-toggle="tab">Order Out</a></li>
+                            <li><a href="#order-in" data-toggle="tab">Order In</a></li>
+                            <li><a href="#supplies" data-toggle="tab">Supplies</a></li>
+                            <li><a href="#ledger" data-toggle="tab">Ledger</a></li>
+                          </ul>
 
-                                          <tr>
-                                            <td>Created By</td>
-                                            <td><strong>Mahima Julka</strong></td>
-                                          </tr>
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="order-out">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>Invoice Id</th>
+                                      <th>Invoice Period</th>
+                                      <th>Invoice Amount</th>
+                                      <th>Invoice Raised</th>
+                                      <th>Invoice Revnue</th>
+                                      <th>Action</th>
+                                    </tr>
 
-                                          <tr>
-                                            <td>Resolution Date</td>
-                                            <td><strong>28 Sep 2016</strong></td>
-                                          </tr>
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="6">Sorry No Records Found.</td>
+                                    </tr> 
 
-                                          <tr>
-                                            <td>Created On</td>
-                                            <td><strong>2016-09-12 12:40:03</strong></td>
-                                          </tr>
-                                      
-                                    </tbody>
-                                  </table>
-                              </div><!-- end of table-box here -->
-                          </div><!-- end of COL here -->
+                                    <tr> 
+                                      <td>10</td>
+                                      <td>Dec-2016</td>
+                                      <td>2290.00</td>
+                                      <td>06 Jan 2017</td>
+                                      <td>228786.23</td>
+                                      <td><a href="invoice-details.html" class="btn-sm btn-default">View</a></td>
+                                    </tr> 
+                                  </tbody> 
+                                </table>
+                              </div><!-- Responsive Div ends here -->
+                            </div><!-- Order Out Ends here -->
 
+                            <div class="tab-pane" id="order-in">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>Invoice ID</th>
+                                      <th>Invoice Period</th>
+                                      <th>Invoice Amount</th>
+                                      <th>Invoice Raised</th>
+                                      <th>Action</th>
+                                    </tr>
 
-                          <div class="col-md-4 col-xs-12">
-                              <div class="table-box">
-                                <h2>Order Info</h2>
-                                    <table class="table table-condensed">
-                                      <tbody>
-                                          <tr>
-                                            <td width="40%">Order Id</td>
-                                            <td width="60%"><strong><a href="#">644504</a></strong></td>
-                                          </tr>
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="5">Sorry No Records Found.</td>
+                                    </tr> 
 
-                                          <tr>
-                                            <td>Vendor Name</td>
-                                            <td><strong>harish</strong></td>
-                                          </tr>
+                                    <tr> 
+                                      <td>9</td>
+                                      <td>Dec-2016</td>
+                                      <td>47758.00</td>
+                                      <td>06 Jan 2017</td>
+                                      <td><a href="invoice-details.html" class="btn-sm btn-default">View</a></td>
+                                    </tr> 
 
-                                          <tr>
-                                            <td>Delivery Date</td>
-                                            <td><strong>08 Aug 2016</strong></td>
-                                          </tr>
-                                      
-                                    </tbody>
-                                  </table>
-                              </div><!-- end of table-box here -->
-                          </div><!-- end of COL here -->
+                                    <tr> 
+                                      <td>9</td>
+                                      <td>Dec-2016</td>
+                                      <td>47758.00</td>
+                                      <td>06 Jan 2017</td>
+                                      <td><a href="invoice-details.html" class="btn-sm btn-default">View</a></td>
+                                    </tr>
 
-                          <div class="col-md-4 col-xs-12">
-                              <div class="table-box">
-                                <h2>Attachment Info</h2>
-                                    <table class="table table-condensed pics margin-bottom-0">
-                                      <tbody>
-                                          <tr>
-                                            <td width="50%"><img src="images/u134.png" class="img-responsive"></td>
-                                            <td width="50%"><img src="images/u134.png" class="img-responsive"></td>
-                                          </tr>
-                                      
-                                    </tbody>
-                                  </table>
-                              </div><!-- end of table-box here -->
-                          </div><!-- end of COL here -->
-                      </div><!-- end of box-flex here -->
+                                  </tbody> 
+                                </table>
 
-                      <div class="table-box" style="height:auto;">
-                        <h2 class="margin-bottom-0">Complaints Comments</h2>
-                        <hr class="margin-top-0">
+                                <p><strong>Credit/Debit Note:</strong></p>
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>Invoice ID</th>
+                                      <th>Invoice Period</th>
+                                      <th>Amount</th>
+                                      <th>Action</th>
+                                    </tr>
 
-                        <div class="message_detail">
-                            <div class="content padding-bottom-0">
-                                <ul class="chat_items">
-                                    <li class="user_1">
-                                        <div class="user-info">
-                                            <span></span>
-                                            <strong class="name">Mahima Julka</strong>
-                                            12 Sep 2016 12:40 PM
-                                        </div>
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="4">Sorry No Records Found.</td>
+                                    </tr> 
 
-                                        <div class="chat">
-                                            <sup></sup>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </div>     
-                                    </li><!-- end of LI here -->
+                                    <tr> 
+                                      <td>9 - C</td>
+                                      <td>Dec-2016</td>
+                                      <td>47758.00</td>
+                                      <td><a href="invoice-details.html" class="btn-sm btn-default">View</a></td>
+                                    </tr>
 
-                                    <li class="user_2">
-                                        <div class="user-info">
-                                            12 Sep 2016 12:43 PM
-                                            <strong class="name">harish</strong>
-                                            <span></span>
-                                        </div>                   
-                                        
-                                        <div class="chat">
-                                            <sup></sup>
-                                            This is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .
-                                        </div>
-                                    </li><!-- end of LI here -->
+                                  </tbody> 
+                                </table>
 
-                                     <li class="user_1">
-                                        <div class="user-info">
-                                            <span></span>
-                                            <strong class="name">Flower Aura</strong>
-                                            04 Sep 2014 1:01
-                                        </div>
+                              </div><!-- Responsive Div ends here -->
+                            </div><!-- Order In Ends here -->
 
-                                        <div class="chat">
-                                            <sup></sup>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                                        </div>     
-                                    </li><!-- end of LI here -->
+                            <div class="tab-pane" id="supplies">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>Invoice ID</th>
+                                      <th>Invoice Period</th>
+                                      <th>Invoice Amount</th>
+                                      <th>Invoice Raised</th>
+                                      <th>Action</th>
+                                    </tr>
 
-                                    <li class="user_2">
-                                        <div class="user-info">
-                                            04 Sep 2014 1:01
-                                            <strong class="name">Harish</strong>
-                                            <span></span>
-                                        </div>                   
-                                        
-                                        <div class="chat">
-                                            <sup></sup>
-                                            This is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .this is reply from vendor test here .
-                                        </div>
-                                    </li><!-- end of LI here -->
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="5">Records Not Found</td>
+                                    </tr> 
 
-                                    <li class="user_1">
-                                        <div class="user-info">
-                                            <span></span>
-                                            <strong class="name">Flower Aura</strong>
-                                            04 Sep 2014 1:01
-                                        </div>
+                                    <tr> 
+                                      <td>9</td>
+                                      <td>Dec-2016</td>
+                                      <td>47758.00</td>
+                                      <td>06 Jan 2017</td>
+                                      <td><a href="invoice-details.html" class="btn-sm btn-default">View</a></td>
+                                    </tr> 
 
-                                        <div class="chat">
-                                            <sup></sup>
-                                            Sed aliquet mauris consectetur tortor cursus, id cursus ipsum efficitur
-                                        </div>     
-                                    </li><!-- end of LI here -->
-                                </ul><!-- end of UL here -->
-                                <div class="clearfix"></div>
-                                <div class="alert alert-danger margin-top-20">Complaint is Closed. You can't add more Comment!</div>
-                            </div><!-- On going chat ends here -->
-                        </div><!-- end of message_detail DIV here -->
+                                    <tr> 
+                                      <td>9</td>
+                                      <td>Dec-2016</td>
+                                      <td>47758.00</td>
+                                      <td>06 Jan 2017</td>
+                                      <td><a href="invoice-details.html" class="btn-sm btn-default">View</a></td>
+                                    </tr>
 
-                    <div class="clearfix"></div>
-                    </div>
+                                  </tbody> 
+                                </table>
+                              </div><!-- Responsive Div ends here -->
+                            </div><!-- Supplies Ends here -->
 
+                            <div class="tab-pane" id="ledger">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th colspan="3" class="merchant text-center txt-blue">Ledger Details,  Dec-2016 ,  Gurgaon_contactus</th>
+                                      <th class="txt-blue">Balance:    -76379.00    Rs.</th>
+                                    </tr>
+
+                                    <tr> 
+                                      <th>Type</th>
+                                      <th>Invoice Period</th>
+                                      <th>Credit - Amount</th>
+                                      <th>Debit - Amount</th>
+                                    </tr>
+
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="4">Sorry No Records Found.</td>
+                                    </tr> 
+                                    <tr> 
+                                      <td>OUT - ORDERS</td>
+                                      <td>Dec-2016</td>
+                                      <td>2290.00</td>
+                                      <td>0.00</td>
+                                    </tr>
+
+                                    <tr> 
+                                      <td>
+                                        OUT - ORDERS
+                                        <div class="grey credit-grey">Credit : 9 - C</div>
+                                      </td>
+                                      <td>Dec-2016</td>
+                                      <td>2290.00<div class="grey credit-amount">Credit : 9 - C</div></td>
+                                      <td>47758.00</td>
+                                    </tr>
+
+                                    <tr> 
+                                      <td>Supplies</td>
+                                      <td>Dec-2016</td>
+                                      <td>0.00</td>
+                                      <td>0.00</td>
+                                    </tr>
+
+                                    <tr> 
+                                      <td colspan="3" class="text-center merchant txt-blue">Net Amount</td>
+                                      <td class="text-center merchant txt-blue">-45468.00</td>
+                                    </tr>
+
+                                  </tbody> 
+                                </table>
+                              </div><!-- Responsive Div ends here -->
+                            </div><!-- Supplies Ends here -->
+
+                          </div>
+                        </div><!-- Tabbing widgets starts here -->
                       </div><!-- white box ends here -->
                     </div><!-- Col div ends here -->
                 </div><!-- ends of ROW here -->
@@ -462,6 +511,7 @@
       </div>
     </div>
     </div>
+<a href="#" class="genrate-invoice img-circle" data-toggle="tooltip" data-placement="top" title="Generate Invoice"><sup class="sprite"></sup></a>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -474,6 +524,14 @@
     <script src="https://use.typekit.net/rou6gqr.js"></script>
     <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/require.js"></script>
+    <script>
+      require({
+        paths: { jquery: 'js/jquery' }
+      }, [ 'jquery', 'js/jquery.onoff' ], function( $ ) {
+        $('input[type=checkbox]').onoff();
+      });
+    </script>
 
   </body>
 </html>

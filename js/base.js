@@ -36,5 +36,13 @@
         $(".vender-btn").click(function(){
             $(".vender").toggleClass("inactive");
         });
+
+       $(".radio").on("click",function() {
+                if($(this).find('input[type="radio"]').is(':checked')) { 
+              $('.radio').removeClass('slot-bg');
+              $(this).addClass('slot-bg');
+            }
+        });
     
     });//end of ready doc here 
+

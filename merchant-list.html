@@ -121,7 +121,7 @@
 
                 <div class="clearfix"></div>
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order" class="select">
                      <span class="sprite in-order-icon"></span>In - Orders
                      <sup class="sprite arrow-icon"></sup>
                     </a>
@@ -148,9 +148,9 @@
                 </div>
                 <div id="out-order" class="panel-collapse collapse in">
                   <ul>
-                    <li><a href="out-all-orders.html" class="select">All Order</a></li>
+                    <li><a href="out-all-orders.html">All Order</a></li>
                     <li><a href="create-order.html">Create Order</a></li>
-                    <li><a href="merchant-list.html">Merchants</a></li>
+                    <li><a href="merchant-list.html" class="select">Merchants</a></li>
                   </ul>
                 </div>
               </div><!-- panel Widget Ends here -->
@@ -228,82 +228,10 @@
                 <div class="row">
                     <div class="col-sm-12">
                       <ul class="filter-wrap">
-                        <li>
-                          <!-- Build your select: -->
-                          <select id="example-getting-started" multiple="multiple">
-                              <option value="cheese">Order Status</option>
-                              <option value="tomatoes">Pending</option>
-                              <option value="mozarella">Processing</option>
-                              <option value="mushrooms">Completed</option>
-                              <option value="pepperoni">Rejected</option>
-                          </select>
-                        </li>
+                        
 
-                        <li><input type="text" class="form-control" placeholder="Refrence Number"></li>
-
-                        <li>
-                            <div class="input-group dropdown">
-                              <input type="text" class="form-control dropdown-toggle" placeholder="Please Select Date" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                              <span class="input-group-addon dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="sprite date-icon"></span></span>
-                              
-                              <div class="dropdown-menu dropdown-date" aria-labelledby="dropdownMenu1">
-                                <div class="clearfix">
-                                  
-                                  <div class="w110">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                        Custom Date
-                                    </label>
-                                  </div>
-
-                                  <div class="date-picker">
-                                    <div class="form-group">
-                                        <div class="input-group date form_date field" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                            <input class="form-control borderRight-0 border-none" size="16" type="text" placeholder="Start Date" name="date">
-                                            <span class="input-group-addon borderLeft-0 border-none"><span class="glyphicon-calendar sprite date-icon"></span></span>
-                                        </div>
-                                        <input type="hidden" id="dtp_input2" name="date" value="" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="input-group date form_date field" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                            <input class="form-control borderRight-0 border-none" size="16" type="text" placeholder="End Date" name="date">
-                                            <span class="input-group-addon borderLeft-0 border-none"><span class="glyphicon-calendar sprite date-icon"></span></span>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div class="radio margin-top-0">
-                                  <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                    Today
-                                  </label>
-                                </div>
-
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                    Tommorrow
-                                  </label>
-                                </div>
-
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                    Yesterday
-                                  </label>
-                                </div>
-
-                                <button type="submit" class="btn btn-default margin-right-8"><span class="icon-wrap-16 sprite apply-icon hidden-xs"></span>Apply</button>
-                                <button type="submit" class="btn btn-primary">
-                                  <span class="sprite reset-icon hidden-xs icon-wrap-16"></span>Reset</button>
-                              </div>
-                          </div>
-                        </li>
-
-                        <li><input type="text" class="form-control" placeholder="Merchant"></li>
-
+                        <li><input type="text" class="form-control" placeholder="Merchant Name"></li>
+                        <li><input type="text" class="form-control" placeholder="Email - xyz@abc.com"></li>
                         <li>
                           <a href="#" class="btn btn-default margin-right-8"><span class="sprite apply-icon hidden-xs"></span>Apply</a>
                           <a href="#" class="btn btn-primary"><span class="sprite reset-icon hidden-xs"></span>Reset</a>
@@ -317,14 +245,13 @@
                       <div class="white-box margin-top-20">
                         <div class="row">
                           <div class="col-sm-4">
-                            <h2 class="heading">Out - Order List</h2>
+                            <h2 class="heading">Merchant Listing</h2>
                           </div>
 
                           <div class="col-sm-8">
                             <ol class="breadcrumb pull-right">
                               <li><a href="#">Home</a></li>
-                              <li>Out Orders</li>
-                              <li>All Orders</li>
+                              <li>Merchant Listing</li>
                             </ol>
                           </div>
                         </div><!-- row ends here -->
@@ -337,88 +264,136 @@
                           <table class="table table-bordered"> 
                             <thead> 
                               <tr class="active"> 
-                                <th width="6%">S.No.</th> 
-                                <th width="7%">Ref N0.</th>
-                                <th width="11%">Delv. Date</th> 
-                                <th width="9%">Merchant</th> 
-                                <th width="13%">Order id</th>
-                                <th width="6%">Status</th>
-                                <th width="23%" class="hidden-xs" >Adrs. / Phone No.</th> 
-                                <th width="11%">Special Instr.</th>
-                                <th width="7%">Amount</th>
-                                <th width="7%">Action</th>
+                                <th width="2%">S.No.</th> 
+                                <th width="10%">Merchant Name</th>
+                                <th width="8%">Email</th> 
+                                <th width="8%">Phone</th> 
+                                <th width="8%">Created</th>
+                                <th width="6%">City</th>
+                                <th width="11%">Details</th>
+                                <th width="10%">Action</th>
                               </tr>
 
                             </thead> 
                             <tbody> 
                               <tr> 
                                 <td scope="row">1</td> 
-                                <td>799877</td>
-                                <td class="text-center">15 Feb, 2017 <br/>09.00 - 12.00</td> 
-                                <td class="merchant">Harry</td> 
-                                <td>2330000149
-                                  <div class="status">
-                                    <sup class="sprite unacknowledged"></sup>
-                                    <span class="hidden-xs hidden-sm">Unacknowledged</span>
-                                  </div>
-                                </td> 
-                                <td align="center"><img src="images/processing.gif"></td> 
+                                <td>Himanshu</td>
+                                <td>hi.chawla@gmail.com</td> 
+                                <td class="merchant"> 2147483647</td> 
+                                <td>12 Feb, 2017</td> 
+                                <td>Gurgaon</td>  
+                                <td>additional information</td>
                                 <td>
-                                  D-052, Spaze Privy, Sector 72 sohna road, Gurgaon, - 987987
-                                  <p class="padding-bottom-0">
-                                    <span class="sprite phone-icon"></span>1234-567895
-                                  </p>
+                                  <a href="#" class="btn xs btn-danger">Inactive</a>
+                                  <a href="#" class="vender sprite"></a>
+                                  <a href="#" class="edit-icon sprite pull-right" data-toggle="modal" data-target=".edit"></a>
+
+                                  <div class="modal fade edit" role="dialog">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content text-left">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Edit Merchant Details</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="row">
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name">Merchant Name</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name" >Email</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name">Phone</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name" >City</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-12 col-xs-12">
+                                                <label for="name" >Addtional Information</label>
+                                                <textarea row="3" class="form-control"></textarea>
+                                              </div>
+
+                                              <div class="form-group col-sm-12 col-xs-12">
+                                                <button class="btn btn-default">Updates</button>
+                                              </div>
+                                          </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
                                 </td> 
-                                <td>special instruction</td> 
-                                <td>500.00 </td>
-                                <td><a href="#" class="btn xs btn-default">Edit</a></td> 
                               </tr> 
-                              
+
                               <tr> 
-                                <td scope="row">2</td> 
-                                <td>799877</td>
-                                <td class="text-center">15 Feb, 2017 <br/>09.00 - 12.00</td> 
-                                <td class="merchant">Harry</td> 
-                                <td>2330000149
-                                  <div class="status">
-                                    <sup class="sprite unacknowledged"></sup>
-                                    <span class="hidden-xs hidden-sm">Unacknowledged</span>
-                                  </div>
-                                </td> 
-                                <td align="center"><img src="images/processing.gif"></td> 
+                                <td scope="row">1</td> 
+                                <td>Brijesh</td>
+                                <td>brijeshranu.ds@gmail.com</td> 
+                                <td class="merchant"> 2147483564</td> 
+                                <td>15 Mar, 2017</td> 
+                                <td>Delhi NCR</td>  
+                                <td>Additional information</td>
                                 <td>
-                                  D-052, Spaze Privy, Sector 72
-                                  <p class="padding-bottom-0">
-                                    <span class="sprite phone-icon"></span>1234-567895
-                                  </p>
+                                  <a href="#" class="btn xs btn-success">Active</a>
+                                  <a href="#" class="edit-icon sprite pull-right" data-toggle="modal" data-target=".edit_1"></a>
+
+                                  <div class="modal fade edit_1" role="dialog">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content text-left">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Edit Merchant Details</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="row">
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name">Merchant Name</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name" >Email</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name">Phone</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-6 col-xs-12">
+                                                <label for="name" >City</label>
+                                                <input type="text" class="form-control" name="m_name" placeholder="Please Enter Name" value="">
+                                              </div>
+
+                                              <div class="form-group col-sm-12 col-xs-12">
+                                                <label for="name" >Addtional Information</label>
+                                                <textarea row="3" class="form-control"></textarea>
+                                              </div>
+
+                                              <div class="form-group col-sm-12 col-xs-12">
+                                                <button class="btn btn-default">Updates</button>
+                                              </div>
+                                          </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
                                 </td> 
-                                <td>special instruction</td> 
-                                <td>500.00 </td>
-                                <td><a href="#" class="btn xs btn-default">Edit</a></td> 
                               </tr>
                               
-                              <tr> 
-                                <td scope="row">2</td> 
-                                <td>799877</td>
-                                <td class="text-center">15 Feb, 2017 <br/>09.00 - 12.00</td> 
-                                <td class="merchant">Harry</td> 
-                                <td>2330000149
-                                  <div class="status">
-                                    <sup class="sprite unacknowledged"></sup>
-                                    <span class="hidden-xs hidden-sm">Unacknowledged</span>
-                                  </div>
-                                </td> 
-                                <td align="center"><img src="images/processing.gif"></td> 
-                                <td>
-                                  D-052, Spaze Privy, Sector 72
-                                  <p class="padding-bottom-0">
-                                    <span class="sprite phone-icon"></span>1234-567895
-                                  </p>
-                                </td> 
-                                <td>special instruction</td> 
-                                <td>500.00 </td>
-                                <td><a href="#" class="btn xs btn-default">Edit</a></td> 
-                              </tr> 
+                              
                               
                             </tbody> 
                           </table>

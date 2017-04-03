@@ -81,7 +81,7 @@ select option {
 }
 
 .logo {
-	display: inline-block;
+	display: none;
 	float: left;
 	margin: 7px 0 0 20px;
 }
@@ -483,6 +483,10 @@ select option {
 	background-color: #5cb85c;
 }
 
+.txt-blue {
+	color: #428bca;
+}
+
 
 
 .status {
@@ -756,9 +760,108 @@ select option {
 
 }
 
+/* New CSS Satrts here */
 
+.radio {
+    position: relative;
+    padding: 10px 20px;
+    color: #333;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.02);
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    width: 155px;
+}
 
+.radio input[type="radio"] {
+	display: none;
+}
 
+.slot-bg {
+	background-color: #9bc04a;
+}
+
+.slot-radio {
+	margin: 20px 0;
+}
+
+.slot-radio li {
+	display: inline-block;
+	margin: 5px 15px;
+}
+
+.edit-icon {
+	width: 20px;
+	height: 21px;
+	display: inline-block;
+	background-position: -64px -106px;
+	margin-left: 15px;
+	position: relative;
+	top: 6px;
+}
+
+.credit-grey {
+	padding: 10px;
+	font-size: 14px;
+	color: #000;
+	border-radius: 4px;
+	margin-left: 5px;
+	display: inline-block;
+	background-color: #c7c7c7;
+	border: 1px solid #ababab;
+}
+
+.credit-amount {
+	padding: 10px;
+	font-size: 14px;
+	color: #000;
+	border-radius: 4px;
+	margin-left: 5px;
+	display: inline-block;
+	background-color: #efefef;
+	border: 1px solid #e2e2e2;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.open-icon {
+	width: 9px; 
+	height: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	background-position: -91px -109px;
+	position: relative;
+	top: 1px;
+}
+
+.processing-icon {
+	width: 12px; 
+	height: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	background-position: -103px -109px;
+	position: relative;
+	top: 1px;
+}
+
+.close-icon {
+	width: 12px; 
+	height: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	background-position: -118px -109px;
+	position: relative;
+	top: 1px;
+}
+
+.inline-block {
+	display: inline-block;
+}
 
 
 /* Media query Starts here */

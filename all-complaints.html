@@ -141,14 +141,14 @@
               
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingTwo">
-                    <a class="collapsed select" role="button" data-toggle="collapse" data-parent="#accordion" href="#out-order">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#out-order">
                       <span class="sprite in-order-icon"></span>Out - Orders
                       <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
-                <div id="out-order" class="panel-collapse collapse in">
+                <div id="out-order" class="panel-collapse collapse">
                   <ul>
-                    <li><a href="out-all-orders.html" class="select">All Order</a></li>
+                    <li><a href="out-all-orders.html">All Order</a></li>
                     <li><a href="create-order.html">Create Order</a></li>
                     <li><a href="merchant-list.html">Merchants</a></li>
                   </ul>
@@ -210,14 +210,11 @@
 
               <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a class="collapsed" href="all-complaints.html">
+                    <a class="collapsed select" href="all-complaints.html">
                       <span class="sprite complaint-icon"></span>Complaints
                     </a>
                 </div>
               </div><!-- panel Widget Ends here -->
-
-
-
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -228,19 +225,17 @@
                 <div class="row">
                     <div class="col-sm-12">
                       <ul class="filter-wrap">
+                        <li><input type="text" class="form-control" placeholder="Complaint Number"></li>
                         <li>
                           <!-- Build your select: -->
                           <select id="example-getting-started" multiple="multiple">
-                              <option value="cheese">Order Status</option>
-                              <option value="tomatoes">Pending</option>
-                              <option value="mozarella">Processing</option>
-                              <option value="mushrooms">Completed</option>
-                              <option value="pepperoni">Rejected</option>
+                              <option value="cheese">Complaint Status</option>
+                              <option value="tomatoes">Select All</option>
+                              <option value="mozarella">Open</option>
+                              <option value="mushrooms">Processing</option>
+                              <option value="pepperoni">Close</option>
                           </select>
                         </li>
-
-                        <li><input type="text" class="form-control" placeholder="Refrence Number"></li>
-
                         <li>
                             <div class="input-group dropdown">
                               <input type="text" class="form-control dropdown-toggle" placeholder="Please Select Date" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -301,8 +296,7 @@
                               </div>
                           </div>
                         </li>
-
-                        <li><input type="text" class="form-control" placeholder="Merchant"></li>
+                        <li><input type="text" class="form-control" placeholder="Please Enter Order ID"></li>
 
                         <li>
                           <a href="#" class="btn btn-default margin-right-8"><span class="sprite apply-icon hidden-xs"></span>Apply</a>
@@ -317,108 +311,62 @@
                       <div class="white-box margin-top-20">
                         <div class="row">
                           <div class="col-sm-4">
-                            <h2 class="heading">Out - Order List</h2>
+                            <h2 class="heading">Complaint Listing</h2>
                           </div>
 
                           <div class="col-sm-8">
                             <ol class="breadcrumb pull-right">
                               <li><a href="#">Home</a></li>
-                              <li>Out Orders</li>
-                              <li>All Orders</li>
+                              <li>Complaint Listing</li>
                             </ol>
                           </div>
-                        </div><!-- row ends here -->
-
-                        <div class="clearfix">
-                          
-                        </div><!-- clearfix heading -->
+                        </div>
 
                         <div class="table-responsive margin-top-20">
-                          <table class="table table-bordered"> 
+                          <table class="table table-striped"> 
                             <thead> 
-                              <tr class="active"> 
-                                <th width="6%">S.No.</th> 
-                                <th width="7%">Ref N0.</th>
-                                <th width="11%">Delv. Date</th> 
-                                <th width="9%">Merchant</th> 
-                                <th width="13%">Order id</th>
-                                <th width="6%">Status</th>
-                                <th width="23%" class="hidden-xs" >Adrs. / Phone No.</th> 
-                                <th width="11%">Special Instr.</th>
-                                <th width="7%">Amount</th>
-                                <th width="7%">Action</th>
+                              <tr> 
+                                <th>S No.</th>
+                                <th>Complaint No.</th> 
+                                <th>Order ID</th> 
+                                <th>Type</th>
+                                <th width="15%">Status</th>
+                                <th>Resolve By</th>
+                                <th width="16%">Created</th>
                               </tr>
 
                             </thead> 
                             <tbody> 
                               <tr> 
-                                <td scope="row">1</td> 
-                                <td>799877</td>
-                                <td class="text-center">15 Feb, 2017 <br/>09.00 - 12.00</td> 
-                                <td class="merchant">Harry</td> 
-                                <td>2330000149
-                                  <div class="status">
-                                    <sup class="sprite unacknowledged"></sup>
-                                    <span class="hidden-xs hidden-sm">Unacknowledged</span>
-                                  </div>
-                                </td> 
-                                <td align="center"><img src="images/processing.gif"></td> 
-                                <td>
-                                  D-052, Spaze Privy, Sector 72 sohna road, Gurgaon, - 987987
-                                  <p class="padding-bottom-0">
-                                    <span class="sprite phone-icon"></span>1234-567895
-                                  </p>
-                                </td> 
-                                <td>special instruction</td> 
-                                <td>500.00 </td>
-                                <td><a href="#" class="btn xs btn-default">Edit</a></td> 
+                                <td>1</td> 
+                                <td><a href="#">119</a></td> 
+                                <td><a href="#">220300</a></td>
+                                <td>Delivery Timing</td>  
+                                <td><span class="btn-sm btn-danger w110 inline-block text-center"><sup class="open-icon sprite"></sup>Open</span></td>
+                                <td>20 Mar 2017</td>
+                                <td>20 Mar 2017 10:43 AM</td> 
                               </tr> 
-                              
+
                               <tr> 
-                                <td scope="row">2</td> 
-                                <td>799877</td>
-                                <td class="text-center">15 Feb, 2017 <br/>09.00 - 12.00</td> 
-                                <td class="merchant">Harry</td> 
-                                <td>2330000149
-                                  <div class="status">
-                                    <sup class="sprite unacknowledged"></sup>
-                                    <span class="hidden-xs hidden-sm">Unacknowledged</span>
-                                  </div>
-                                </td> 
-                                <td align="center"><img src="images/processing.gif"></td> 
-                                <td>
-                                  D-052, Spaze Privy, Sector 72
-                                  <p class="padding-bottom-0">
-                                    <span class="sprite phone-icon"></span>1234-567895
-                                  </p>
-                                </td> 
-                                <td>special instruction</td> 
-                                <td>500.00 </td>
-                                <td><a href="#" class="btn xs btn-default">Edit</a></td> 
-                              </tr>
-                              
-                              <tr> 
-                                <td scope="row">2</td> 
-                                <td>799877</td>
-                                <td class="text-center">15 Feb, 2017 <br/>09.00 - 12.00</td> 
-                                <td class="merchant">Harry</td> 
-                                <td>2330000149
-                                  <div class="status">
-                                    <sup class="sprite unacknowledged"></sup>
-                                    <span class="hidden-xs hidden-sm">Unacknowledged</span>
-                                  </div>
-                                </td> 
-                                <td align="center"><img src="images/processing.gif"></td> 
-                                <td>
-                                  D-052, Spaze Privy, Sector 72
-                                  <p class="padding-bottom-0">
-                                    <span class="sprite phone-icon"></span>1234-567895
-                                  </p>
-                                </td> 
-                                <td>special instruction</td> 
-                                <td>500.00 </td>
-                                <td><a href="#" class="btn xs btn-default">Edit</a></td> 
+                                <td>1</td> 
+                                <td><a href="#">119</a></td> 
+                                <td><a href="#">220300</a></td>
+                                <td>Delivery Timing</td> 
+                                <td><span class="btn-sm btn-warning w110 inline-block text-center"><sup class="processing-icon sprite"></sup>Processing</span></td>
+                                <td>20 Mar 2017</td>
+                                <td>20 Mar 2017 10:43 AM</td> 
                               </tr> 
+
+                              <tr> 
+                                <td>1</td> 
+                                <td><a href="#">119</a></td> 
+                                <td><a href="#">220300</a></td>
+                                <td>Delivery Timing</td> 
+                                <td><span class="btn-sm btn-success w110 inline-block text-center"><sup class="close-icon sprite"></sup>Close</span></td>
+                                <td>20 Mar 2017</td>
+                                <td>20 Mar 2017 10:43 AM</td> 
+                              </tr> 
+
                               
                             </tbody> 
                           </table>

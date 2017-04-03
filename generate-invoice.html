@@ -121,13 +121,13 @@
 
                 <div class="clearfix"></div>
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order" class="select">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#in-order">
                      <span class="sprite in-order-icon"></span>In - Orders
                      <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
                 
-                <div id="in-order" class="panel-collapse collapse in">
+                <div id="in-order" class="panel-collapse collapse">
                   <ul>
                     <li><a href="all-orders.html" class="select">All Orders</a></li>
                     <li><a href="#">Unacknowledged <span class="count">32</span></a></li>
@@ -180,15 +180,15 @@
 
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingFour">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing">
+                    <a class="collapsed select" role="button" data-toggle="collapse" data-parent="#accordion" href="#f-billing" class="select">
                       <span class="sprite fBilling-icon"></span>FlowerAura Billing
                       <sup class="sprite arrow-icon"></sup>
                     </a>
                 </div>
-                <div id="f-billing" class="panel-collapse collapse">
+                <div id="f-billing" class="panel-collapse collapse in">
                   <ul>
                     <li><a href="billing-summary.html">Billing Summary</a></li>
-                    <li><a href="generate-invoice.html">Generate invoice</a></li>
+                    <li><a href="generate-invoice.html" class="select">Generate invoice</a></li>
                   </ul>
                 </div>
               </div><!-- panel Widget Ends here -->
@@ -202,8 +202,8 @@
                 </div>
                 <div id="m-billing" class="panel-collapse collapse">
                   <ul>
-                    <li><a href="#">Billing Summary</a></li>
-                    <li><a href="#">Generate invoice</a></li>
+                    <li><a href="m-billing.html">Billing Summary</a></li>
+                    <li><a href="m-generate-invoice.html">Generate invoice</a></li>
                   </ul>
                 </div>
               </div><!-- panel Widget Ends here -->
@@ -245,76 +245,231 @@
                 <div class="row">
                   <div class="col-sm-12"> 
                       <div class="white-box">
-                        <div class="table-responsive">
-                          <table class="table table-striped"> 
-                            <thead> 
-                              <tr> 
-                                <th width="8%" align="center" valign="bottom">S.No.</th>
-                                <th width="15%" align="center" valign="bottom">Order ID</th>
-                                <th width="24%" valign="bottom">Delivery Date</th>
-                                <th width="51%" valign="middle">Amount</th>
-                              </tr>
-                            </thead> 
 
-                            <tbody> 
-                              <tr>
-                                <td>1.</td>
-                                <td><a href="#">34567</a></td>
-                                <td>29 Oct, 2015 <span class="pincode">(3 PM - 6 PM)</span></td>
-                                <td>1378.00</td>
-                              </tr>
-                            
-                              <tr>
-                                <td>2.</td>
-                                <td><a href="#">4546</a></td>
-                                <td>01 Nov, 2015 <span class="pincode">(1 PM - 3 PM)</span></td>
-                                <td>2345.00</td>
-                              </tr>
-            
-                              <tr>
-                                  <td>3.</td>
-                                  <td><a href="#">34567</a></td>
-                                  <td>29 Oct, 2015 <span class="pincode">(3 PM - 6 PM)</span></td>
-                                  <td>1378.00</td>
-                              </tr>
-            
-                              <tr>
-                                  <td>4.</td>
-                                  <td><a href="#">4546</a></td>
-                                  <td>01 Nov, 2015 <span class="pincode">(1 PM - 3 PM)</span></td>
-                                  <td>2345.00</td>
-                              </tr>
-            
-                              <tr>
-                                  <td>5.</td>
-                                  <td><a href="#">34567</a></td>
-                                  <td>29 Oct, 2015 <span class="pincode">(3 PM - 6 PM)</span></td>
-                                  <td>1378.00</td>
-                              </tr>
-            
-                              <tr>
-                                  <td>6.</td>
-                                  <td><a href="#">4546</a></td>
-                                  <td>01 Nov, 2015 <span class="pincode">(1 PM - 3 PM)</span></td>
-                                  <td>2345.00</td>
-                              </tr>
-            
-                              <tr>
-                                  <td>7.</td>
-                                  <td><a href="#">34567</a></td>
-                                  <td>29 Oct, 2015 <span class="pincode">(3 PM - 6 PM)</span></td>
-                                  <td>1378.00</td>
-                              </tr>
-            
-                              <tr>
-                                  <td>8.</td>
-                                  <td><a href="#">4546</a></td>
-                                  <td>01 Nov, 2015 <span class="pincode">(1 PM - 3 PM)</span></td>
-                                  <td>2345.00</td>
-                              </tr>
-                            </tbody><!-- End of table body --> 
-                          </table><!-- End of table -->
-                      </div><!-- Responsive Div ends here -->
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <h2 class="heading">Generate Invoice</h2>
+                          </div>
+
+                          <div class="col-sm-8">
+                            <ol class="breadcrumb pull-right">
+                              <li><a href="#">Home</a></li>
+                              <li>Generate Invoice</li>
+                            </ol>
+                          </div>
+                        </div>
+
+                        <!-- Tabbing widgets starts here -->
+                        <div class="margin-top-30">
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#order-out" data-toggle="tab">Order Out</a></li>
+                            <li><a href="#order-in" data-toggle="tab">Order In</a></li>
+                            <li><a href="#supplies" data-toggle="tab">Supplies</a></li>
+                          
+                          </ul>
+
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="order-out">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>S.No</th>
+                                      <th>Order ID</th> 
+                                      <th>Vendor Name</th>
+                                      <th>Delivery Date</th>
+                                      <th>Status</th>
+                                      <th>Amount</th>
+                                    </tr>
+
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td>1</td>
+                                      <td><a href="#">220324</a></td> 
+                                      <td>Gurgaon_contactus</td> 
+                                      <td>03 Feb, 2017</td> 
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite unacknowledged"></sup>
+                                          <span class="hidden-xs hidden-sm">Unacknowledged</span>
+                                        </div>
+                                      </td> 
+                                      <td>500</td>
+                                    </tr> 
+
+                                    <tr> 
+                                      <td>2</td>
+                                      <td><a href="#">220324</a></td> 
+                                      <td>Gurgaon_contactus</td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite acknowledged"></sup>
+                                          <span class="hidden-xs hidden-sm">Acknowledged</span>
+                                        </div>
+                                      </td>
+                                      <td>500</td>
+                                    </tr>
+
+                                    <tr class="warning">
+                                      <td>3</td>
+                                      <td><a href="#">220324</a></td>
+                                      <td>Gurgaon_contactus</td>
+                                      <td>10 Mar, 2016</td>
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite out-for-delivery"></sup>
+                                          <span class="hidden-xs hidden-sm">Out for Delivery</span>
+                                        </div>
+                                      </td>
+                                      <td>500</td>
+                                    </tr>
+
+                                    <tr> 
+                                      <td>4</td>
+                                      <td>220324</td>
+                                      <td>Gurgaon_contactus</td>
+                                      <td>10 Mar, 2016</td>
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite completed"></sup>
+                                          <span class="hidden-xs hidden-sm">Completed</span>
+                                        </div>
+                                      </td>
+                                      <td>500</td>
+                                    </tr>
+
+                                    <tr> 
+                                      <td>4</td>
+                                      <td>220324</td>
+                                      <td>Gurgaon_contactus</td>
+                                      <td>10 Mar, 2016</td>
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite declined"></sup>
+                                          <span class="hidden-xs hidden-sm">Declined</span>
+                                        </div>
+                                      </td> 
+                                      <td>500</td> 
+                                    </tr>
+
+                                    <tr> 
+                                      <td>4</td>
+                                      <td>220324</td>
+                                      <td>Gurgaon_contactus</td>
+                                      <td>10 Mar, 2016</td>
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite cancel"></sup>
+                                          <span class="hidden-xs hidden-sm">Cancel</span>
+                                        </div>
+                                      </td>
+                                      <td>500</td>
+                                    </tr>
+
+                                    <tr> 
+                                      <td>4</td>
+                                      <td>220324</td>
+                                      <td>Gurgaon_contactus</td>
+                                      <td>10 Mar, 2016</td>
+                                      <td>
+                                        <div class="status">
+                                          <sup class="sprite unacknowledged"></sup>
+                                          <span class="hidden-xs hidden-sm">Unacknowledged</span>
+                                        </div>
+                                      </td>
+                                      <td>500</td> 
+                                    </tr> 
+                                  </tbody> 
+                                </table>
+                              </div><!-- Responsive Div ends here -->
+                            </div>
+
+                            <div class="tab-pane" id="order-in">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>S.No</th>
+                                      <th>Order ID</th>
+                                      <th>Delivery Date</th>
+                                      <th>Amount</th>
+                                    </tr>
+
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="4">Sorry No Records Found.</td>
+                                    </tr> 
+
+                                    <tr> 
+                                      <td>1</td>
+                                      <td><a href="#">220324</a></td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>500</td>
+                                    </tr> 
+
+                                    <tr> 
+                                      <td>2</td>
+                                      <td><a href="#">220324</a></td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>500</td>
+                                    </tr> 
+
+                                    <tr> 
+                                      <td>3</td>
+                                      <td><a href="#">220324</a></td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>500</td>
+                                    </tr> 
+
+                                    <tr> 
+                                      <td>4</td>
+                                      <td><a href="#">220324</a></td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>500</td>
+                                    </tr> 
+
+                                  </tbody> 
+                                </table>
+                              </div><!-- Responsive Div ends here -->
+                            </div>
+
+                            <div class="tab-pane" id="supplies">
+                              <div class="table-responsive margin-top-20">
+                                <table class="table table-striped"> 
+                                  <thead> 
+                                    <tr> 
+                                      <th>S.No</th>
+                                      <th>Date</th>
+                                      <th>Date</th>
+                                      <th>Unit Price</th>
+                                      <th>Quantity</th>
+                                      <th>Total Amount</th>
+                                    </tr>
+
+                                  </thead> 
+                                  <tbody> 
+                                    <tr> 
+                                      <td colspan="6">Sorry No Records Found.</td>
+                                    </tr> 
+                                    <tr> 
+                                      <td>1</td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>03 Feb, 2017</td>
+                                      <td>500</td>
+                                      <td>4</td>
+                                      <td>500</td>
+                                    </tr> 
+                                  </tbody> 
+                                </table>
+                              </div><!-- Responsive Div ends here -->
+                            </div>
+                          </div>
+                        </div><!-- Tabbing widgets starts here -->
                       </div><!-- white box ends here -->
                     </div><!-- Col div ends here -->
                 </div><!-- ends of ROW here -->
