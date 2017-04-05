@@ -889,6 +889,10 @@ label span {
     display: table;
 }
 
+.w100 {
+	width: 100%;
+}
+
 /* Media query Starts here */
 @media (min-width: 768px) {
 	.visibility-xs {
