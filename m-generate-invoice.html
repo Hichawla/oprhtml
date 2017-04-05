@@ -225,24 +225,6 @@
         <div id="page-content-wrapper">
           <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12">
-                  <ul class="filter-wrap">
-                    <li class="form-group">
-                      <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                          <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
-                          <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
-                      </div>
-                      <input type="hidden" id="dtp_input2" value="" />
-                    </li>
-                    <li><input class="form-control" placeholder="Merchant Name" type="text"></li>
-                    <li>
-                      <a href="#" class="btn btn-default margin-right-8"><span class="sprite apply-icon hidden-xs"></span>Apply</a>
-                    </li>
-                  </ul>                                           
-                </div><!-- Filter Row ends here -->
-            </div><!-- Filter Row ends here -->
-
-            <div class="row">
               <div class="col-sm-12"> 
                 <div class="white-box">
                     <div class="row">
@@ -258,355 +240,365 @@
                           </ol>
                         </div>
                       </div>
+
+                      <div class="col-sm-12 margin-bottom-30">
+                        <div class="alert alert-danger">Please Select Merchant</div>
+                      </div>
                       </div><!-- end of ROW -->
 
-                      <div class="alert alert-danger">Please Select Merchant</div>
-
-                      <div class="row margin-top-20">
-                      <div class="col-sm-6">
-                        <ul>
-                          
-                          <li class="form-group">
-                            <label class="control-label">Assigned to<span>*</span></label>
-                            <select>
-                                <option value="-- Choose --" selected="">Choose Delivery Type</option>
-                                <option value="Regular">Self</option>
-                                <option value="Midnight">FlowerAura</option>
-                              </select>
-                          </li>
-
-                          <!--<li class="form-group">
-                            <label class="control-label">Assigned to<span>*</span></label>
-                            <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
-                                <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
-                            </div>
-                            <input type="hidden" id="dtp_input2" value="" />
-                          </li>-->
-                        </ul>
-                      </div><!-- end of Col 6 -->
-
-
-                  
-                    </div><!-- end of ROW -->
+                      <div class="row margin-bottom-15">
+                        <div class="col-sm-6">
+                          <ul class="">
+                            <li class="form-group">
+                              <label class="control-label col-sm-4">Assigned to<span>*</span></label>
+                              <div class="col-sm-8">
+                                <select>
+                                  <option value="-- Choose --" selected="">Choose Delivery Type</option>
+                                  <option value="Regular">Self</option>
+                                  <option value="Midnight">FlowerAura</option>
+                                </select>
+                              </div>
+                            </li>
+                          </ul>
+                        </div><!-- end of Col 6 -->
+                      </div><!-- end of ROW -->
 
 
                     <!-- Self form widgets starts here -->
                     <div class="row">
-                      <li class="col-sm-6">
-                        <label class="control-label">Merchant name<span>*</span></label>
-                        <input type="text" placeholder="Price" class="form-control">
+                      <li class="col-sm-6 form-group">
+                        <label class="control-label col-sm-4">Merchant name<span>*</span></label>
+                        <div class="col-sm-8"><input type="text" placeholder="Enter Merchant name" class="form-control"></div>
                       </li>
 
-                      <li class="col-sm-6">
-                        <label class="control-label">Refrence Number#<span>*</span></label>
-                        <input type="text" placeholder="Price" class="form-control">
+                      <li class="col-sm-6 form-group">
+                        <label class="control-label col-sm-4">Refrence Number#<span>*</span></label>
+                        <div class="col-sm-8"><input type="text" placeholder="Enter Refrence Number" class="form-control"></div>
                       </li>
                     </div><!-- Self form widgets starts here -->
 
-                      <!-- Table Box Starts here -->
-                      <div class="table-box margin-top-30">
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <h2 class="heading margin-bottom-10 margin-top-0">Delivery Info</h2>
-                          </div><!-- end of heading -->
 
-                          <div class="col-sm-6">
-                            <ul>
-                              <li class="form-group">
-                                <label class="control-label">Delivery Date<span>*</span></label>
-                                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
-                                    <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
-                                </div>
-                                <input type="hidden" id="dtp_input2" value="" />
-                              </li>
+                    <!-- Delivery Info widgets starts here -->
+                    <div class="row form-horizontal box-flex">
+                      <div class="col-sm-6 col-xs-12 flex">
+                        <!-- Table Box Starts here -->
+                        <div class="table-box margin-top-30">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              
+                            </div><!-- end of heading -->
 
-                              <li class="form-group">
-                                <label class="control-label">Delivery Slot<span>*</span></label>
-                                <p class="padding-bottom-0"><a href="#" data-toggle="modal" data-target=".slot" class="btn btn-default"> + Add a Timeslot</a></p>
-
-                                <div class="modal fade slot" role="dialog">
-                                  <div class="modal-dialog modal-lg">
-                                    <div class="modal-content text-left">
-                                      <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                          <h4 class="modal-title" id="myModalLabel">Delivery Slot</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                         <!-- Nav tabs -->
-                                          <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active"><a href="#standard" aria-controls="home" role="tab" data-toggle="tab">Standard</a></li>
-                                            <li><a href="#fixed" aria-controls="profile" role="tab" data-toggle="tab">Fixed</a></li>
-                                            <li><a href="#midnight" aria-controls="messages" role="tab" data-toggle="tab">Midnight</a></li>
-                                          </ul>
-
-                                          <!-- Tab panes -->
-                                          <div class="tab-content">
-                                            <div class="tab-pane active" id="standard">
-                                              <!-- radio list Starts here -->
-                                              <ul class="slot-radio">
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_1" value="option1" data-toggle="radio">
-                                                    09.00 - 12.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_2" value="option2" data-toggle="radio">
-                                                    12.00 - 15.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_3" value="option3" data-toggle="radio">
-                                                    15.00 - 18.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_3" value="option4" data-toggle="radio">
-                                                    18.00 - 21.00
-                                                  </label>
-                                                </li>
-                                              </ul><!-- radio list ends here -->
-                                            </div><!-- Standard widgets ends here -->
-
-                                            <div class="tab-pane" id="fixed">
-                                              <!-- radio list Starts here -->
-                                              <ul class="slot-radio">
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_5" value="option5" data-toggle="radio">
-                                                    07.00 - 08.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_6" value="option6" data-toggle="radio">
-                                                    08.00 - 09.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option7" data-toggle="radio">
-                                                    09.00 - 10.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    10.00 - 11.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    11.00 - 12.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    12.00 - 13.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    13.00 - 14.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    14.00 - 15.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    15.00 - 16.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    16.00 - 17.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                   17.00 - 18.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    18.00 - 19.00 
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    19.00 - 20.00 
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    20.00 - 21.00
-                                                  </label>
-                                                </li>
-
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    21.00 - 22.00
-                                                  </label>
-                                                </li>
-
-                                                 <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
-                                                    22.00 - 23.00 
-                                                  </label>
-                                                </li>
-                                              </ul><!-- radio list ends here -->
-                                            </div><!-- Fixed widgets ends here -->
-
-                                            <div class="tab-pane" id="midnight">
-                                              <!-- radio list Starts here -->
-                                              <ul class="slot-radio">
-                                                <li>
-                                                  <label class="radio">
-                                                    <input type="radio" name="slot" id="slot_1" value="option1" data-toggle="radio">
-                                                    23.00 - 00.00
-                                                  </label>
-                                                </li>
-                                              </ul><!-- radio list ends here -->
-                                            </div><!-- Midnight widgets ends here -->
-                                          </div>
-                                          
-                                        </div>
+                            <div class="col-sm-12">
+                              <h2 class="heading margin-bottom-10 margin-top-0">Delivery Info</h2>
+                              <ul>
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Delivery Date<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                        <input class="form-control borderRight-0" size="16" type="text" placeholder="Select Date">
+                                        <span class="input-group-addon borderLeft-0"><span class="glyphicon-calendar sprite date-icon"></span></span>
                                     </div>
+                                    <input type="hidden" id="dtp_input2" value="" />
+                                  </div><!-- col-8 ends here -->
+                                </li>
+
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Delivery Slot<span>*</span></label>
+                                  <p class="padding-bottom-0 col-sm-9"><a href="#" data-toggle="modal" data-target=".slot" class="btn btn-default"> + Add a Timeslot</a></p>
+
+                                  <div class="modal fade slot" role="dialog">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content text-left">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Delivery Slot</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                           <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs" role="tablist">
+                                              <li class="active"><a href="#standard" aria-controls="home" role="tab" data-toggle="tab">Standard</a></li>
+                                              <li><a href="#fixed" aria-controls="profile" role="tab" data-toggle="tab">Fixed</a></li>
+                                              <li><a href="#midnight" aria-controls="messages" role="tab" data-toggle="tab">Midnight</a></li>
+                                            </ul>
+
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                              <div class="tab-pane active" id="standard">
+                                                <!-- radio list Starts here -->
+                                                <ul class="slot-radio">
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_1" value="option1" data-toggle="radio">
+                                                      09.00 - 12.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_2" value="option2" data-toggle="radio">
+                                                      12.00 - 15.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_3" value="option3" data-toggle="radio">
+                                                      15.00 - 18.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_3" value="option4" data-toggle="radio">
+                                                      18.00 - 21.00
+                                                    </label>
+                                                  </li>
+                                                </ul><!-- radio list ends here -->
+                                              </div><!-- Standard widgets ends here -->
+
+                                              <div class="tab-pane" id="fixed">
+                                                <!-- radio list Starts here -->
+                                                <ul class="slot-radio">
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_5" value="option5" data-toggle="radio">
+                                                      07.00 - 08.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_6" value="option6" data-toggle="radio">
+                                                      08.00 - 09.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option7" data-toggle="radio">
+                                                      09.00 - 10.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      10.00 - 11.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      11.00 - 12.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      12.00 - 13.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      13.00 - 14.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      14.00 - 15.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      15.00 - 16.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      16.00 - 17.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                     17.00 - 18.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      18.00 - 19.00 
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      19.00 - 20.00 
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      20.00 - 21.00
+                                                    </label>
+                                                  </li>
+
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      21.00 - 22.00
+                                                    </label>
+                                                  </li>
+
+                                                   <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_7" value="option8" data-toggle="radio">
+                                                      22.00 - 23.00 
+                                                    </label>
+                                                  </li>
+                                                </ul><!-- radio list ends here -->
+                                              </div><!-- Fixed widgets ends here -->
+
+                                              <div class="tab-pane" id="midnight">
+                                                <!-- radio list Starts here -->
+                                                <ul class="slot-radio">
+                                                  <li>
+                                                    <label class="radio">
+                                                      <input type="radio" name="slot" id="slot_1" value="option1" data-toggle="radio">
+                                                      23.00 - 00.00
+                                                    </label>
+                                                  </li>
+                                                </ul><!-- radio list ends here -->
+                                              </div><!-- Midnight widgets ends here -->
+                                            </div>
+                                            
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>  
+                                </li>
+
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Message</label>
+                                  <div class="col-sm-9">
+                                    <textarea rows="3" class="form-control" placeholder="Enter Message"></textarea>
                                   </div>
-                                </div>  
-                              </li>
-                              <li class="form-group">
-                                <label class="control-label">Message</label>
-                                <textarea rows="3" class="form-control" placeholder="Enter Message"></textarea>
-                              </li>
+                                </li>
 
-                              <li class="form-group">
-                                <label class="control-label">Sender Name</label>
-                                <input type="text" placeholder="Enter Sender Name" class="form-control">
-                              </li>
-                            </ul>
-                          </div><!-- end of Col 6 -->
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Sender Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" placeholder="Enter Sender Name" class="form-control">
+                                  </div>
+                                </li>
 
-                          <div class="col-sm-6">
-                            <ul>
-                              <li class="form-group">
-                                <label class="control-label">Recipient Name<span>*</span></label>
-                                <input type="text" placeholder="Pincode" class="form-control">
-                              </li>
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Recipient Name<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <input type="text" placeholder="Enter Recipient Name" class="form-control">
+                                  </div>
+                                </li>
 
-                              <li class="form-group">
-                                <label class="control-label">Phone<span>*</span></label>
-                                <input type="text" placeholder="Pincode" class="form-control">
-                              </li>
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Phone<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <input type="text" placeholder="Enter Phone" class="form-control">
+                                  </div>
+                                </li>
 
-                              <li class="form-group">
-                                <label class="control-label">Address<span></span></label>
-                                <textarea rows="3" class="form-control" placeholder="Enter Message"></textarea>
-                              </li>
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Address<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <textarea rows="3" class="form-control" placeholder="Enter Address"></textarea>
+                                  </div>
+                                </li>
 
-                              <li class="form-group row">
-                                <div class="col-sm-6">
-                                  <label class="control-label">City<span>*</span></label>
-                                  <input type="text" placeholder="Pincode" class="form-control">
-                                </div>
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">City<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <input type="text" placeholder="Enter City" class="form-control">
+                                  </div>
+                                </li>
 
-                                <div class="col-sm-6">
-                                  <label class="control-label">Pincode<span>*</span></label>
-                                  <input type="text" placeholder="Pincode" class="form-control">
-                                </div>
-                              </li>
-                            </ul>
-                          </div><!-- end of Col 6 -->
-                        </div><!-- row ends here -->
-                      <div class="clearfix"></div>  
-                      </div><!-- Table Box ends here -->
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Pincode<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <input type="text" placeholder="Enter Pincode" class="form-control">
+                                  </div>
+                                </li>
+                              </ul>
+                            </div><!-- end of Col 6 -->
 
-                      <!-- Table Box Starts here -->
-                      <div class="table-box margin-top-30">
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <h2 class="heading margin-bottom-10 margin-top-0">Product Info</h2>
-                          </div><!-- end of heading -->
+                          </div><!-- row ends here -->
+                          <div class="clearfix"></div>  
+                        </div><!-- Table Box ends here -->
+                      </div><!-- Col-6 ends here -->
 
-                          <div class="col-sm-6">
-                            <ul>
-                              <li class="form-group">
-                                <label class="control-label">Product Description<span>*</span></label>
-                                <textarea rows="3" class="form-control" placeholder="Enter Message"></textarea>
-                              </li>
+                      <div class="col-sm-6 col-xs-12 box-flex">
+                        <!-- Table Box Starts here -->
+                        <div class="table-box margin-top-30">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              
+                            </div><!-- end of heading -->
 
-                              <li class="form-group">
-                                <label class="control-label">Special Instruction</label>
-                                <textarea rows="3" class="form-control" placeholder="Enter Message"></textarea>
-                              </li>
+                            <div class="col-sm-12">
+                              <h2 class="heading margin-bottom-10 margin-top-0">Product Info</h2>
+                              <ul>
+                
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Product Description<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <textarea rows="3" class="form-control" placeholder="Enter Product Description"></textarea>
+                                  </div>
+                                </li>
 
-                              <li class="form-group">
-                                <label class="control-label">Price<span>*</span></label>
-                                <input type="text" placeholder="Enter Price" class="form-control">
-                              </li>
-                            </ul>
-                          </div><!-- end of Col 6 -->
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Special Instruction</label>
+                                  <div class="col-sm-9">
+                                    <textarea rows="3" class="form-control" placeholder="Enter Special Instruction"></textarea>
+                                  </div>
+                                </li>
 
-                          <div class="col-sm-6">
-                            <ul>
-                              <li class="form-group">
-                                <label class="control-label">Product Image</label>
-                                <div class="box">
-                                  <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
-                                  <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
-                                </div>
-                              </li>
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Enter Price<span>*</span></label>
+                                  <div class="col-sm-9">
+                                    <input type="text" placeholder="Enter Sender Name" class="form-control">
+                                  </div>
+                                </li>
 
+                                <li class="form-group">
+                                  <label class="control-label col-sm-3">Product Image<span>*</span></label>
+                                  <div class="col-sm-9 box">
+                                    <div class="box">
+                                      <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
+                                      <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
+                                    </div>
+                                    <p class="margin-top-15"><img src="images/no-images.jpg"></p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div><!-- end of Col 6 -->
+                          </div><!-- row ends here -->
+                          <div class="clearfix"></div>  
+                        </div><!-- Table Box ends here -->
+                      </div><!-- Col-6 ends here -->
 
-                              <li class="form-group row">
-                                <span class="col-sm-12">
-                                  <img src="images/no-images.jpg">
-                                </span>
-                              </li>
-                            </ul>
-                          </div><!-- end of Col 6 -->
-                        </div><!-- row ends here -->
-                      <div class="clearfix"></div>  
-                      </div><!-- Table Box ends here -->
-
-
-
+                    </div><!-- ends of row -->
                 </div><!-- white box ends here -->
               </div><!-- Col div ends here -->
             </div><!-- ends of ROW here -->
@@ -671,8 +663,6 @@
       </div>
     </div>
     </div>
-
-    <a href="#" class="genrate-invoice img-circle" data-toggle="tooltip" data-placement="top" title="Generate Invoice"><sup class="sprite"></sup></a>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
